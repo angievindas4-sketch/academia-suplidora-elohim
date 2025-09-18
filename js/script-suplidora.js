@@ -1,9 +1,9 @@
 // ==========================
-// Acordeón: solo una categoría abierta a la vez
+// Acordeón categorías
 // ==========================
 const acordeones = document.querySelectorAll(".acordeon");
 
-acordeones.forEach((btn) => {
+acordeones.forEach(btn => {
     btn.addEventListener("click", function() {
         const panel = this.nextElementSibling;
         const openPanel = document.querySelector(".panel:not([style*='display: none'])");
@@ -17,7 +17,7 @@ acordeones.forEach((btn) => {
 });
 
 // ==========================
-// Funciones para carrito
+// Carrito
 // ==========================
 let carrito = [];
 
@@ -34,9 +34,9 @@ function actualizarCarrito() {
     carrito.forEach((item, index) => {
         total += item.precio;
 
-        // Crear contenedor del nombre con botón "X"
         const li = document.createElement("li");
 
+        // Contenedor del nombre con botón eliminar
         const nombreDiv = document.createElement("div");
         nombreDiv.classList.add("nombre-producto");
 
@@ -50,9 +50,9 @@ function actualizarCarrito() {
 
         nombreDiv.appendChild(spanNombre);
         nombreDiv.appendChild(btnEliminar);
-
         li.appendChild(nombreDiv);
 
+        // Precio del producto
         const precioP = document.createElement("p");
         precioP.textContent = `₡${item.precio.toLocaleString()}`;
         li.appendChild(precioP);
@@ -82,21 +82,19 @@ function enviarWhatsApp() {
         mensaje += `- ${item.nombre} ₡${item.precio.toLocaleString()}\n`;
     });
 
-    // Número de WhatsApp actualizado
     const numero = "71256012"; 
     const url = `https://wa.me/506${numero}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
 }
 
 // ==========================
-// Toggle carrito en móvil
+// Toggle carrito flotante
 // ==========================
 document.addEventListener("DOMContentLoaded", () => {
-    const carritoAside = document.querySelector("aside.carrito");
-    carritoAside.addEventListener("click", (e) => {
-        // Evitar que el click en botones internos cierre el carrito
-        if (window.innerWidth <= 768 && !e.target.closest("button")) {
-            carritoAside.classList.toggle("abierto");
-        }
+    const carritoBtn = document.querySelector(".btn-carrito");
+    const contenido = document.querySelector(".contenido-carrito");
+
+    carritoBtn.addEventListener("click", () => {
+        contenido.classList.toggle("abierto");
     });
 });

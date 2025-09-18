@@ -1,5 +1,5 @@
 /* ===================================
-   Estilos generales para Academia
+   Estilos generales
 =================================== */
 body {
     font-family: Arial, sans-serif;
@@ -11,29 +11,26 @@ body {
 
 header {
     background: url("../img/FONDO MARMOL.jpg") repeat-x center top;
-    background-size: auto 180px; /* ajusta la altura de la imagen */
+    background-size: auto 180px;
     color: white;
     text-align: center;
-    height: 150px; /* reduce la altura total del header */
+    height: 150px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 40px; /* ~40px */
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* sombra más fuerte */
+    font-size: 40px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
 }
 
-/* ===================================
-   Menú de navegación
-=================================== */
 nav {
-    background: #92f5f8; /* celeste */
+    background: #92f5f8;
     display: flex;
     justify-content: center;
-    gap: 140px; /* aumenta la separación entre enlaces */
+    gap: 140px;
     padding: 10px 0;
     flex-wrap: wrap;
 }
@@ -42,9 +39,9 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 15px; /* más espacio interno */
-    font-size: 20px; /* tamaño de letra */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* sombra del texto */
+    padding: 8px 15px;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     transition: 0.3s;
 }
 
@@ -54,7 +51,7 @@ nav a:hover {
 }
 
 /* ===================================
-   Grid de categorías
+   Grid de categorías y productos
 =================================== */
 .grid-categorias {
     display: flex;
@@ -84,20 +81,20 @@ nav a:hover {
     background-color: #ff99cc;
     color: white;
     font-size: 1.8rem;
-    padding: 30px 50px;
+    padding: 20px 40px;
     margin: 15px 0;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     transition: 0.3s;
-    width: 300px; /* todos los botones del mismo tamaño */
+    width: 300px;
 }
 
 .main-btn:hover {
     background-color: #ff66aa;
 }
 
-/* Panel oculto */
+/* Panel de productos */
 .panel {
     display: none;
     background: #fff0f5;
@@ -105,13 +102,10 @@ nav a:hover {
     padding: 15px;
 }
 
-/* ===================================
-   Grid de productos dentro de cada categoría
-=================================== */
 .panel .productos-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 productos por fila */
-    gap: 20px; /* espacio entre productos */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .producto {
@@ -119,165 +113,92 @@ nav a:hover {
     padding: 10px;
     background: #ffe6f0;
     text-align: center;
-    width: 200px;  /* tamaño fijo */
-    height: 280px; /* altura fija para que todos los productos queden alineados */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* mantiene espacio entre imagen, texto y botón */
+    justify-content: space-between;
 }
 
 .producto img {
     width: 100%;
-    height: 150px; /* tamaño fijo de imagen */
-    object-fit: contain; /* mantiene proporción de la imagen */
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 
-/* Responsive */
-@media (max-width:1200px) {
-    .panel .productos-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 por fila en pantallas medianas */
-    }
+.agregar-btn {
+    background-color: #ff99cc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-@media (max-width:900px) {
-    .panel .productos-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 por fila en tablet */
-    }
+.agregar-btn:hover {
+    background-color: #ff66aa;
 }
-
-@media (max-width:600px) {
-    .panel .productos-grid {
-        grid-template-columns: 1fr; /* 1 por fila en móvil */
-    }
-}
-
 
 /* ===================================
-   Carrito versión escritorio
+   Carrito flotante
 =================================== */
-aside.carrito {
+.carrito {
     position: fixed;
-    right: 10px;
-    top: 120px;
-    width: 250px;
-    background: #92f5f8;
-    padding: 10px;
-    border-radius: 10px;
+    bottom: 20px;
+    right: 20px;
     z-index: 1000;
 }
 
-/* ===================================
-   Carrito versión móvil
-=================================== */
-@media(max-width:768px){
-    aside.carrito {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        top: auto;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: #ff99cc;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        overflow: hidden;
-        transition: all 0.3s ease;
-    }
-
-    /* Cuando el carrito está activo (clase abierta) */
-    aside.carrito.abierto {
-        width: 90%;
-        height: auto;
-        max-height: 70vh;
-        border-radius: 15px;
-        padding: 15px;
-        right: 50%;
-        transform: translateX(50%);
-        overflow-y: auto;
-        background: #92f5f8;
-        color: #333;
-    }
-
-    /* Ocultar contenido por defecto en móvil */
-    aside.carrito h3,
-    aside.carrito ul,
-    aside.carrito p,
-    aside.carrito button {
-        display: none;
-    }
-
-    /* Mostrar cuando está abierto */
-    aside.carrito.abierto h3,
-    aside.carrito.abierto ul,
-    aside.carrito.abierto p,
-    aside.carrito.abierto button {
-        display: block;
-    }
-}
-
-
-/* ===================================
-   Footer
-=================================== */
-footer {
-    background: #92f5f8;
+.btn-carrito {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ff99cc;
+    border: none;
     color: white;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 0.9rem;
-    margin-top: auto;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
 }
 
-/* ===================================
-   Responsive
-=================================== */
-@media(max-width:1024px){
-    .productos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.btn-carrito:hover {
+    background: #ff66aa;
 }
 
-@media(max-width:768px){
-    .grid-categorias {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .main-btn {
-        width: 250px;
-        font-size: 1.5rem;
-        padding: 20px 30px;
-    }
-
-    aside.carrito {
-        width: 90%;
-        top: auto;
-        bottom: 0;
-        right: 50%;
-        transform: translateX(50%);
-    }
+.contenido-carrito {
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #92f5f8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    color: #333;
 }
 
-@media(max-width:600px){
-    .productos-grid {
-        grid-template-columns: 1fr;
-    }
+.contenido-carrito.abierto {
+    display: block;
 }
 
-/* ===================================
-   Botón eliminar en carrito
-=================================== */
+.contenido-carrito ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
 .nombre-producto {
     display: flex;
-    justify-content: space-between; /* separa el nombre y la X */
+    justify-content: space-between;
     align-items: center;
     font-weight: bold;
-    margin-bottom: 5px;
 }
 
 .eliminar-btn {
@@ -294,4 +215,45 @@ footer {
 
 .eliminar-btn:hover {
     background-color: #ff3388;
+}
+
+.enviar-btn {
+    background-color: #ff3388;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.enviar-btn:hover {
+    background-color: #ff1a75;
+}
+
+/* ===================================
+   Footer
+=================================== */
+footer {
+    background: #92f5f8;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+}
+
+/* ===================================
+   Responsive
+=================================== */
+@media(max-width:900px) {
+    .panel .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:600px) {
+    .panel .productos-grid {
+        grid-template-columns: 1fr;
+    }
 }
