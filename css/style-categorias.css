@@ -165,7 +165,9 @@ footer {
     to {opacity: 1; transform: translateY(0);}
 }
 
-/* Responsive */
+/* ===================================
+   Media queries existentes
+=================================== */
 @media(max-width: 1024px) {
     nav {
         gap: 80px;
@@ -182,5 +184,63 @@ footer {
     .grid-cursos {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+}
+
+/* ===================================
+   Ajustes responsivos para móviles (480px y menores)
+=================================== */
+@media (max-width: 480px) {
+    header h1.academia-titulo {
+        font-size: 32px;
+    }
+
+    nav {
+        gap: 15px;
+        padding: 5px 0;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    .grid-cursos {
+        padding: 20px 10px;
+        gap: 15px;
+    }
+
+    .curso {
+        min-height: auto;
+        padding: 15px;
+    }
+
+    .detalle-item {
+        flex: 1 1 100%;
+        padding: 6px 8px;
+    }
+
+    .inscribirse-btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    .form-inscripcion {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-inscripcion input,
+    .form-inscripcion select,
+    .form-inscripcion button {
+        width: 100%;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 10px 0;
     }
 }
