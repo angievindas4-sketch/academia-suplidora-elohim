@@ -153,7 +153,7 @@ nav a:hover {
 
 
 /* ===================================
-   Carrito
+   Carrito versión escritorio
 =================================== */
 aside.carrito {
     position: fixed;
@@ -163,7 +163,62 @@ aside.carrito {
     background: #92f5f8;
     padding: 10px;
     border-radius: 10px;
+    z-index: 1000;
 }
+
+/* ===================================
+   Carrito versión móvil
+=================================== */
+@media(max-width:768px){
+    aside.carrito {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        top: auto;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #ff99cc;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    /* Cuando el carrito está activo (clase abierta) */
+    aside.carrito.abierto {
+        width: 90%;
+        height: auto;
+        max-height: 70vh;
+        border-radius: 15px;
+        padding: 15px;
+        right: 50%;
+        transform: translateX(50%);
+        overflow-y: auto;
+        background: #92f5f8;
+        color: #333;
+    }
+
+    /* Ocultar contenido por defecto en móvil */
+    aside.carrito h3,
+    aside.carrito ul,
+    aside.carrito p,
+    aside.carrito button {
+        display: none;
+    }
+
+    /* Mostrar cuando está abierto */
+    aside.carrito.abierto h3,
+    aside.carrito.abierto ul,
+    aside.carrito.abierto p,
+    aside.carrito.abierto button {
+        display: block;
+    }
+}
+
 
 /* ===================================
    Footer
