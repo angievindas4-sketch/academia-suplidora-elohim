@@ -96,6 +96,19 @@ nav a:hover {
     width: 300px; /* ancho fijo para que todos sean iguales */
     text-align: center;
 }
+.botones-principales {
+    display: flex;
+    flex-direction: column; /* columna en móviles */
+    align-items: center;    /* centrado horizontal */
+    gap: 15px;              /* espacio entre botones */
+    margin: 20px 0;         /* margen superior e inferior */
+}
+
+.botones-principales button {
+    width: 80%; /* ancho adaptable en móviles */
+    max-width: 250px; /* no demasiado grande */
+    font-size: 1.1rem; /* ajusta tamaño de texto */
+}
 
 .main-btn:hover {
     background-color: #ff66aa;
@@ -155,21 +168,17 @@ footer {
 /* ===================================
    Responsive
 =================================== */
-@media(max-width:1024px){
-    .grid-categorias {
-        gap: 30px;
+/* Centrar menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    nav {
+        justify-content: center; /* ya estaba, pero reforzamos */
+        gap: 10px; /* ajusta el espacio entre enlaces */
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block; /* asegura que los enlaces se centren */
+        margin: 5px 0; /* separa verticalmente si se acomodan en varias filas */
     }
 }
 
-@media(max-width:768px){
-    .grid-categorias {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .main-btn {
-        font-size: 1.3rem;
-        padding: 20px 30px;
-        width: 80%; /* ancho relativo para móvil */
-    }
-}
