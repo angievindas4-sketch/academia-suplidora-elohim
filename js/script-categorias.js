@@ -12,7 +12,7 @@ function toggleForm(button) {
     // Mostrar u ocultar el formulario actual
     form.style.display = (form.style.display === "flex") ? "none" : "flex";
     if (form.style.display === "flex") {
-        form.style.animation = "fadeIn 0.5s";SSSSSSS
+        form.style.animation = "fadeIn 0.5s";
     }
 }
 
@@ -21,7 +21,7 @@ function toggleForm(button) {
 // ==========================
 function enviarWhatsapp(button) {
     const form = button.closest('.form-inscripcion');
-    const curso = form.closest('.curso').querySelector('h3').innerText.trim(); // Nombre del curso/seminario/taller/virtual
+    const curso = form.closest('.curso').querySelector('h3').innerText.trim();
     const nombre = form.querySelector('.nombre').value.trim();
     const direccion = form.querySelector('.direccion').value.trim();
     const telefono = form.querySelector('.telefono').value.trim();
