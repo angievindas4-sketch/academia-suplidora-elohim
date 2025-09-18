@@ -1,0 +1,175 @@
+/* ===================================
+   Estilos generales para Academia
+=================================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #333;
+}
+
+header {
+    background: url("../img/FONDO MARMOL.jpg") repeat-x center top;
+    background-size: auto 180px; /* ajusta la altura de la imagen */
+    color: white;
+    text-align: center;
+    height: 150px; /* reduce la altura total del header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px; /* ~40px */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* sombra más fuerte */
+}
+
+
+/* ===================================
+   Menú de navegación
+=================================== */
+nav {
+    background: #92f5f8; /* celeste */
+    display: flex;
+    justify-content: center;
+    gap: 140px; /* aumenta la separación entre enlaces */
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px; /* más espacio interno */
+    font-size: 20px; /* tamaño de letra */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* sombra del texto */
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #ff99cc;
+    border-radius: 5px;
+}
+
+
+/* ===================================
+   Grid de categorías
+=================================== */
+.grid-categorias {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea columnas al inicio */
+    gap: 60px; /* espacio entre columnas */
+    margin: 20px auto;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* separación entre bloques de botones */
+}
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Botones de categorías uniformes */
+.main-btn {
+    background-color: #ff99cc;
+    color: white;
+    font-size: 1.8rem;
+    padding: 30px 50px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 300px; /* ancho fijo para que todos sean iguales */
+    text-align: center;
+}
+
+.main-btn:hover {
+    background-color: #ff66aa;
+}
+
+/* ===================================
+   Panel oculto
+=================================== */
+.panel {
+    display: none;
+    background: #fff0f5;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.panel li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #ffe6f0;
+}
+
+.inscribirse-btn {
+    background-color: #66ccff;
+    border: none;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.inscribirse-btn:hover {
+    background-color: #92f5f8;
+}
+
+/* ===================================
+   Footer
+=================================== */
+footer {
+    background: #92f5f8;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    margin-top: auto; /* fuerza al footer a ir abajo */
+}
+
+/* ===================================
+   Responsive
+=================================== */
+@media(max-width:1024px){
+    .grid-categorias {
+        gap: 30px;
+    }
+}
+
+@media(max-width:768px){
+    .grid-categorias {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main-btn {
+        font-size: 1.3rem;
+        padding: 20px 30px;
+        width: 80%; /* ancho relativo para móvil */
+    }
+}

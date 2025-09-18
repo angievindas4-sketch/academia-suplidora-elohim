@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos Academia Elohim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style-categorias.css">
+</head>
+<body>
+
+<header>
+    <h1 class="academia-titulo">Bienvenido a la Academia Elohim</h1>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="suplidora.html">Suplidora</a>
+    <a href="academia.html" class="btn-regresar">⬅ Regresar a la Academia</a>
+</nav>
+
+<main>
+    <h2 style="text-align:center; color:#ff66aa;">Nuestros Cursos</h2>
+
+    <div class="grid-cursos">
+        <!-- Curso 1 -->
+        <div class="curso">
+            <h3>Curso Básico de Manicurista</h3>
+            <div class="detalle-curso">
+                <div class="detalle-item"><p>Duración: 1 mes</p></div>
+                <div class="detalle-item"><p>Precio: ₡50,000</p></div>
+                <div class="detalle-item"><p>Apartar: ₡15,000</p></div>
+                <div class="detalle-item"><p>Método de pago: Efectivo / SINPE móvil</p></div>
+            </div>
+            <p>Aprende las bases del cuidado y embellecimiento de uñas.</p>
+            <button class="inscribirse-btn" onclick="toggleForm(this)">Inscribirse</button>
+            <div class="form-inscripcion">
+                <input type="text" placeholder="Nombre completo" class="nombre">
+                <input type="text" placeholder="Dirección" class="direccion">
+                <input type="tel" placeholder="Teléfono" class="telefono">
+                <select class="pago">
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="SINPE móvil">SINPE móvil</option>
+                </select>
+                <button onclick="enviarWhatsapp(this)">Enviar inscripción</button>
+            </div>
+        </div>
+
+        <!-- Curso 2 -->
+        <div class="curso">
+            <h3>Curso Avanzado de Manicurista</h3>
+            <div class="detalle-curso">
+                <div class="detalle-item"><p>Duración: 2 meses</p></div>
+                <div class="detalle-item"><p>Precio: ₡80,000</p></div>
+                <div class="detalle-item"><p>Apartar: ₡20,000</p></div>
+                <div class="detalle-item"><p>Método de pago: Efectivo / SINPE móvil</p></div>
+            </div>
+            <p>Perfecciona técnicas avanzadas y decoración profesional de uñas.</p>
+            <button class="inscribirse-btn" onclick="toggleForm(this)">Inscribirse</button>
+            <div class="form-inscripcion">
+                <input type="text" placeholder="Nombre completo" class="nombre">
+                <input type="text" placeholder="Dirección" class="direccion">
+                <input type="tel" placeholder="Teléfono" class="telefono">
+                <select class="pago">
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="SINPE móvil">SINPE móvil</option>
+                </select>
+                <button onclick="enviarWhatsapp(this)">Enviar inscripción</button>
+            </div>
+        </div>
+
+        <!-- Curso 3 -->
+        <div class="curso">
+            <h3>Curso Máster Educador</h3>
+            <div class="detalle-curso">
+                <div class="detalle-item"><p>Duración: 3 meses</p></div>
+                <div class="detalle-item"><p>Precio: ₡120,000</p></div>
+                <div class="detalle-item"><p>Apartar: ₡30,000</p></div>
+                <div class="detalle-item"><p>Método de pago: Efectivo / SINPE móvil</p></div>
+            </div>
+            <p>Capacitación para ser instructor profesional en uñas y estética.</p>
+            <button class="inscribirse-btn" onclick="toggleForm(this)">Inscribirse</button>
+            <div class="form-inscripcion">
+                <input type="text" placeholder="Nombre completo" class="nombre">
+                <input type="text" placeholder="Dirección" class="direccion">
+                <input type="tel" placeholder="Teléfono" class="telefono">
+                <select class="pago">
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="SINPE móvil">SINPE móvil</option>
+                </select>
+                <button onclick="enviarWhatsapp(this)">Enviar inscripción</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>Desarrollado por Anyelith Nuñez Vindas</p>
+</footer>
+
+<script>
+function toggleForm(btn) {
+    const form = btn.nextElementSibling;
+    if (form.style.display === "flex") {
+        form.style.display = "none";
+    } else {
+        document.querySelectorAll('.form-inscripcion').forEach(f => f.style.display = "none");
+        form.style.display = "flex";
+        form.style.animation = "fadeIn 0.5s";
+    }
+}
+
+function enviarWhatsapp(button) {
+    const form = button.parentElement;
+    const curso = form.closest('.curso').querySelector('h3').innerText;
+    const nombre = form.querySelector('.nombre').value;
+    const direccion = form.querySelector('.direccion').value;
+    const telefono = form.querySelector('.telefono').value;
+    const pago = form.querySelector('.pago').value;
+
+    const mensaje = `Hola! Deseo inscribirme en el *${curso}*.
+Nombre: ${nombre}
+Dirección: ${direccion}
+Teléfono: ${telefono}
+Método de pago: ${pago}`;
+
+    const numeroWhatsApp = "50671256012";
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
