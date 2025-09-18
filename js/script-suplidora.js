@@ -1,4 +1,6 @@
+// ==========================
 // Acordeón: solo una categoría abierta a la vez
+// ==========================
 const acordeones = document.querySelectorAll(".acordeon");
 
 acordeones.forEach((btn) => {
@@ -6,7 +8,7 @@ acordeones.forEach((btn) => {
         const panel = this.nextElementSibling;
         const openPanel = document.querySelector(".panel:not([style*='display: none'])");
 
-        if(openPanel && openPanel !== panel){
+        if (openPanel && openPanel !== panel) {
             openPanel.style.display = "none";
         }
 
@@ -14,15 +16,17 @@ acordeones.forEach((btn) => {
     });
 });
 
+// ==========================
 // Funciones para carrito
+// ==========================
 let carrito = [];
 
-function agregarAlCarrito(nombre, precio){
-    carrito.push({nombre, precio});
+function agregarAlCarrito(nombre, precio) {
+    carrito.push({ nombre, precio });
     actualizarCarrito();
 }
 
-function actualizarCarrito(){
+function actualizarCarrito() {
     const lista = document.getElementById("listaCarrito");
     lista.innerHTML = "";
     let total = 0;
@@ -59,15 +63,16 @@ function actualizarCarrito(){
     document.getElementById("totalCarrito").textContent = `Total: ₡${total.toLocaleString()}`;
 }
 
-// Eliminar producto del carrito
-function eliminarDelCarrito(index){
+function eliminarDelCarrito(index) {
     carrito.splice(index, 1);
     actualizarCarrito();
 }
 
+// ==========================
 // Enviar carrito a WhatsApp
-function enviarWhatsApp(){
-    if(carrito.length === 0) {
+// ==========================
+function enviarWhatsApp() {
+    if (carrito.length === 0) {
         alert("Tu lista está vacía.");
         return;
     }
@@ -82,3 +87,16 @@ function enviarWhatsApp(){
     const url = `https://wa.me/506${numero}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
 }
+
+// ==========================
+// Toggle carrito en móvil
+// ==========================
+document.addEventListener("DOMContentLoaded", () => {
+    const carritoAside = document.querySelector("aside.carrito");
+    carritoAside.addEventListener("click", (e) => {
+        // Evitar que el click en botones internos cierre el carrito
+        if (window.innerWidth <= 768 && !e.target.closest("button")) {
+            carritoAside.classList.toggle("abierto");
+        }
+    });
+});
