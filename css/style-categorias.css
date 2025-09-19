@@ -21,10 +21,9 @@ header {
 }
 
 header h1.academia-titulo {
-    margin: 0;
-    font-size: 50px;
-    text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
-    font-family: 'Dancing Script', cursive;
+  margin: 0;
+    font-size: 40px; /* ~40px */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* sombra más fuerte */
 }
 
 nav {

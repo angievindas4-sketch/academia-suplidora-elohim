@@ -36,10 +36,8 @@ header {
 /* Header principal */
 header h1 {
     margin: 0;
-    font-size: 50px; /* Aumenta el tamaño del título */
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); /* Sombra más marcada para que resalte */
-    color: white;
-    text-align: center;
+    font-size: 40px; /* ~40px */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* sombra más fuerte */
 }
 
 /* Ajuste para pantallas pequeñas (móviles) */
