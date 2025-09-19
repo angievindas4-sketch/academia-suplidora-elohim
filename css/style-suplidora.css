@@ -20,6 +20,19 @@ header {
     align-items: center;
 }
 
+/* ===================================
+   Centrar título del catálogo
+=================================== */
+.titulo-catalogo-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.bienvenida {
+    font-size: 2.2rem; /* ajusta tamaño si quieres */
+    color: #ff99cc;
+}
+
 /* Header principal */
 header h1 {
     margin: 0;
@@ -36,7 +49,6 @@ header h1 {
         text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
     }
 }
-
 
 nav {
     background: #92f5f8;
@@ -80,6 +92,7 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    width: 100%; /* asegura que el panel no se monte al lado */
 }
 
 .btn-container {
@@ -112,6 +125,8 @@ nav a:hover {
     background: #fff0f5;
     border-radius: 10px;
     padding: 15px;
+    width: 100%;        /* que use todo el ancho disponible */
+    margin-top: 20px;   /* espacio entre el botón y el panel */
 }
 
 .panel .productos-grid {
@@ -255,8 +270,6 @@ footer {
     font-size: 0.9rem;
     margin-top: auto; /* fuerza al footer a ir abajo */
 }
-
-
 
 /* ===================================
    Responsive
