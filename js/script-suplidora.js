@@ -68,6 +68,7 @@ function eliminarDelCarrito(index) {
     actualizarCarrito();
 }
 
+
 // ==========================
 // Enviar carrito a WhatsApp
 // ==========================
