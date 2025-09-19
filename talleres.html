@@ -10,7 +10,7 @@
 <body>
 
 <header>
-    <h1 class="academia-titulo">Bienvenido a la Academia Elohim</h1>
+    <h1 class="academia-titulo">"Explora nuestros talleres prácticos y divertidos"</h1>
 </header>
 
 <nav>
@@ -72,8 +72,13 @@
 </main>
 
 <footer>
-    <p>Desarrollado por Anyelith Nuñez Vindas</p>
+    <p id="footer-text">By Freelancer Anyelith Nuñez Vindas &copy; <span id="anio"></span></p>
 </footer>
+
+<script>
+    document.getElementById("anio").textContent = new Date().getFullYear();
+</script>
+
 
 <script>
 function toggleForm(btn) {

@@ -161,9 +161,17 @@ footer {
     color: white;
     text-align: center;
     padding: 15px 0;
-    font-size: 0.9rem;
-    margin-top: auto; /* fuerza al footer a ir abajo */
+    font-size: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* sombra para resaltar el texto */
+    position: relative; /* para que no se quede flotando arriba */
+    bottom: 0;
+    width: 100%;
 }
+
+#footer-text {
+    margin: 0;
+}
+
 
 /* ===================================
    Responsive

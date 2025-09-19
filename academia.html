@@ -43,8 +43,13 @@
 </main>
 
 <footer>
-    <p>Desarrollado por Anyelith Nuñez Vindas</p>
+    <p id="footer-text">By Freelancer Anyelith Nuñez Vindas &copy; <span id="anio"></span></p>
 </footer>
+
+<script>
+    document.getElementById("anio").textContent = new Date().getFullYear();
+</script>
+
 
 <script src="js/script-academia.js"></script>
 </body>

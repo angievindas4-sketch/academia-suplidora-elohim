@@ -41,24 +41,31 @@
 
 <section id="ubicacion">
     <h2>Ubicación</h2>
-    <div class="mapa" style="width:100%; height:400px;">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.9954109905134!2d-84.0767474!3d9.934339099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e30020219267%3A0xde081b4644d07355!2sSuplidora%20de%20U%C3%B1as%20Elohim!5e0!3m2!1ses-419!2scr!4v1758303586285!5m2!1ses-419!2scr" 
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+    <div class="mapa" style="width:100%; max-width:100%; height:400px; text-align:center;">
+        <a href="https://maps.app.goo.gl/J8jkzxcePQkAvAtq8" target="_blank" style="display:inline-block; width:100%; height:100%;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.9954109905134!2d-84.0767474!3d9.934339099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e30020219267%3A0xde081b4644d07355!2sSuplidora%20de%20U%C3%B1as%20Elohim!5e0!3m2!1ses-419!2scr!4v1758303586285!5m2!1ses-419!2scr" 
+                width="100%" 
+                height="100%" 
+                style="border:0; pointer-events:none;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </a>
     </div>
     <p style="text-align:center; margin-top:10px;">Dirección: Av. 1, San José, El Carmen, 10101</p>
 </section>
 
 
 <footer>
-    <p>Desarrollado por Freelancer Anyelith Nuñez Vindas</p>
+    <p id="footer-text">By Freelancer Anyelith Nuñez Vindas &copy; <span id="anio"></span></p>
 </footer>
+
+<script>
+    document.getElementById("anio").textContent = new Date().getFullYear();
+</script>
+
 
 </body>
 </html>

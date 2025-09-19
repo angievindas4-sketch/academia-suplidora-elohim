@@ -9,16 +9,28 @@ body {
     color: #333;
 }
 
+/* ===================================
+   Header unificado para todas las páginas
+=================================== */
 header {
     background: url("../img/FONDO MARMOL.jpg") repeat-x center top;
-    background-size: auto 180px;
+    background-size: auto 180px; /* ajusta la altura de la imagen */
     color: white;
     text-align: center;
-    height: 150px;
+    height: 150px; /* altura uniforme */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+header h1 {
+    margin: 0;
+    font-size: 40px; /* mismo tamaño para todos */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* sombra para resaltar */
+    color: white;
+}
+
 
 /* ===================================
    Centrar título del catálogo
@@ -265,9 +277,17 @@ footer {
     color: white;
     text-align: center;
     padding: 15px 0;
-    font-size: 0.9rem;
-    margin-top: auto; /* fuerza al footer a ir abajo */
+    font-size: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* sombra para resaltar el texto */
+    position: relative; /* para que no se quede flotando arriba */
+    bottom: 0;
+    width: 100%;
 }
+
+#footer-text {
+    margin: 0;
+}
+
 
 /* ===================================
    Responsive
