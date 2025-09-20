@@ -1,16 +1,28 @@
 /* ===================================
    Estilos generales
 =================================== */
-html, body {
-  height: 100%; /* asegura que body ocupe toda la pantalla */
-  margin: 0;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #333;
 }
 
+/* ===================================
+   Header unificado para todas las páginas
+=================================== */
+header {
+    background: url("../img/FONDO MARMOL.jpg") repeat-x center top;
+    background-size: auto 180px; /* ajusta la altura de la imagen */
+    color: white;
+    text-align: center;
+    height: 150px; /* altura uniforme */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 main {
   flex: 1; /* empuja el footer hacia abajo */
 }
