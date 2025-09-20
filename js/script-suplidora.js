@@ -16,6 +16,33 @@ acordeones.forEach(btn => {
     });
 });
 
+function abrirModal(src) {
+    let modal = document.getElementById('modalImagen');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'modalImagen';
+        document.body.appendChild(modal);
+
+        modal.onclick = function() {
+            modal.classList.remove('show'); // Fade out
+            setTimeout(() => {
+                modal.style.display = 'none';
+                modal.innerHTML = '';
+            }, 300); // espera a que termine la animación
+        };
+    }
+
+    const img = document.createElement('img');
+    img.src = src;
+    modal.innerHTML = '';
+    modal.appendChild(img);
+
+    modal.style.display = 'flex';
+    setTimeout(() => {
+        modal.classList.add('show'); // Fade in
+    }, 10);
+}
+
 // ==========================
 // Carrito
 // ==========================

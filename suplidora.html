@@ -23,7 +23,12 @@
     <div class="titulo-catalogo-container">
         <h2 class="bienvenida">Catálogo de Productos</h2>
     </div>
-    ...
+    
+<!-- Modal para imagen -->
+<div id="modal-imagen" class="modal">
+    <span id="cerrar-modal">&times;</span>
+    <img class="modal-contenido" id="img-modal">
+</div>
 
 
     <div class="grid-categorias">
@@ -34,247 +39,247 @@
                 <div class="panel">
                     <div class="productos-grid">
                         <div class="producto">
-                            <img src="img/ACCESORIOS/ACUARELA VICTORIA .jpg" alt="Acuarela 50 colores">
+                            <img src="img/ACCESORIOS/ACUARELA VICTORIA .jpg" alt="Acuarela 50 colores" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Acuarela Victoria 50 colores</p>
                             <p class="precio-producto">₡15,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Acuarela 50 colores', 15000)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/ANILLITO CEJAS.jpg" alt="Anillo para goma">
+                            <img src="img/ACCESORIOS/ANILLITO CEJAS.jpg" alt="Anillo para goma" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Anillito para Goma</p>
                             <p class="precio-producto">₡2,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Anillo goma', 2000)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/ANILLITO CEJAS ROSADO.jpg" alt="Anillo goma rosado">
+                            <img src="img/ACCESORIOS/ANILLITO CEJAS ROSADO.jpg" alt="Anillo goma rosado" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Anillito para Goma rosado</p>
                             <p class="precio-producto">₡2,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Anillo goma rosado', 2000)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/AT TOOL.jpg" alt="Tool para Difuminado">
+                            <img src="img/ACCESORIOS/AT TOOL.jpg" alt="Tool para Difuminado" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Tool para Difuminado</p>
                             <p class="precio-producto">₡2,500</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Tool para Difuminado', 2500 )">Agregar a lista</button>
                         </div>
                        <div class="producto">
-                            <img src="img/ACCESORIOS/BASE DE CABESOTE.jpg" alt="Base de Cabezote">
+                            <img src="img/ACCESORIOS/BASE DE CABESOTE.jpg" alt="Base de Cabezote" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Base de Cabezote</p>
                             <p class="precio-producto">₡2,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Base de Cabezote', 2000)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/CABEZOTE.jpg" alt="Cabezote para Práctica">
+                            <img src="img/ACCESORIOS/CABEZOTE.jpg" alt="Cabezote para Práctica" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Cabezote para Práctica</p>
                             <p class="precio-producto">₡12,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Cabezote para Práctica',12000 )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/CARGADOR LAMPARA.jpg" alt="Cargador de Lámpara">
+                            <img src="img/ACCESORIOS/CARGADOR LAMPARA.jpg" alt="Cargador de Lámpara" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Cargador de Lámpara</p>
                             <p class="precio-producto">₡2,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Cargador de Lámpara',2000 )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/CINTA.jpg" alt="Microporo">
+                            <img src="img/ACCESORIOS/CINTA.jpg" alt="Microporo" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Microporo</p>
                             <p class="precio-producto">₡800</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Microporo', 800 )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/CORTA TIPS COLOR.jpg" alt="Corta Tips Color">
+                            <img src="img/ACCESORIOS/CORTA TIPS COLOR.jpg" alt="Corta Tips Color" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Corta Tips Color</p>
                             <p class="precio-producto">₡1,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Corta Tips Color',1000 )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/CORTA TIPS CON MEDIDA.jpg" alt="Corta Tips con Medida">
+                            <img src="img/ACCESORIOS/CORTA TIPS CON MEDIDA.jpg" alt="Corta Tips con Medida" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Corta Tips con Medida</p>
                             <p class="precio-producto">₡2,500</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Corta Tips con Medida', 2500)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/CORTA TIPS TORNA.jpg" alt="Corta Tips Tornasol">
+                            <img src="img/ACCESORIOS/CORTA TIPS TORNA.jpg" alt="Corta Tips Tornasol" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Corta Tips Tornasol</p>
                             <p class="precio-producto">₡2,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Corta Tips Tornasol', 2000)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/CORTA UÑAS.jpg" alt="Corta Uñas Grande">
+                            <img src="img/ACCESORIOS/CORTA UÑAS.jpg" alt="Corta Uñas Grande" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Corta Uñas Grande</p>
                             <p class="precio-producto">₡1,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Corta Uñas Grande', 1000)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/DEDOS PRACTICA.jpg" alt="Dedos de Práctica">
+                            <img src="img/ACCESORIOS/DEDOS PRACTICA.jpg" alt="Dedos de Práctica" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Dedos de Práctica</p>
                             <p class="precio-producto">₡350</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Dedos de Práctica',350 )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/DISPERSADOR 1.jpg" alt="Dispersador">
+                            <img src="img/ACCESORIOS/DISPERSADOR 1.jpg" alt="Dispersador" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Dispersador</p>
                             <p class="precio-producto">₡1,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Dispersador', 1000 )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/ESPEJO DENTAL.jpg" alt="Espejo Dental">
+                            <img src="img/ACCESORIOS/ESPEJO DENTAL.jpg" alt="Espejo Dental" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Espejo Dental</p>
                             <p class="precio-producto">₡2,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Espejo Dental', 2000)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/ESTERILIZADOR ECO.jpg" alt="Esterilizador Economico">
+                            <img src="img/ACCESORIOS/ESTERILIZADOR ECO.jpg" alt="Esterilizador Economico" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Esterilizador Economico</p>
                             <p class="precio-producto">₡3,800</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Esterilizador Economico', 3800)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/ESTERILIZADOR POUNCH.jpg" alt="Caja de bolsas para esterilizar">
+                            <img src="img/ACCESORIOS/ESTERILIZADOR POUNCH.jpg" alt="Caja de bolsas para esterilizar" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Caja de bolsas para esterilizar</p>
                             <p class="precio-producto">₡8,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Caja de bolsas para esterilizar', 8000)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/ESTRELLAS TORNASOL.jpg" alt="Cortador de almendra">
+                            <img src="img/ACCESORIOS/ESTRELLAS TORNASOL.jpg" alt="Cortador de almendra" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Cortador de almendra</p>
                             <p class="precio-producto">₡2,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Cortador de almendra', 2000)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/GUANTES FOTO.jpg" alt="Guantes UV Led">
+                            <img src="img/ACCESORIOS/GUANTES FOTO.jpg" alt="Guantes UV Led" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Guantes UV Led</p>
                             <p class="precio-producto">₡1,800</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Guantes UV Led', 1800)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/GUANTES.jpg" alt="Guantes de Nitrilo">
+                            <img src="img/ACCESORIOS/GUANTES.jpg" alt="Guantes de Nitrilo" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Guantes de Nitrilo</p>
                             <p class="precio-producto">₡4,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Guantes de Nitrilo', 4000)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/KIT KATANA.jpg" alt="Kit Katana">
+                            <img src="img/ACCESORIOS/KIT KATANA.jpg" alt="Kit Katana" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Kit Katana</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Kit Katana', )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/LIBRO MOSTRARIO.jpg" alt="Libro Mostrario">
+                            <img src="img/ACCESORIOS/LIBRO MOSTRARIO.jpg" alt="Libro Mostrario" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Libro Mostrario</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Libro Mostrario', )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/MANO PRACTICA ECO.jpg" alt="Mano de Práctica Económica">
+                            <img src="img/ACCESORIOS/MANO PRACTICA ECO.jpg" alt="Mano de Práctica Económica" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Mano de Práctica Económica</p>
                             <p class="precio-producto">₡5,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Mano de Práctica Económica', 5000)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/NIPPER GRANDE.jpg" alt="Nipper Pedicure">
+                            <img src="img/ACCESORIOS/NIPPER GRANDE.jpg" alt="Nipper Pedicure" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Nipper Pedicure</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Nipper Pedicure', )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/NIPPER TORNASOL.jpg" alt="Nipper Tornasol">
+                            <img src="img/ACCESORIOS/NIPPER TORNASOL.jpg" alt="Nipper Tornasol" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Nipper Tornasol</p>
                             <p class="precio-producto">₡2,800</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Nipper Tornasol', 2800)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/PALETA DE PEDI GRANDE.jpg" alt="Paleta de Pedi Grande">
+                            <img src="img/ACCESORIOS/PALETA DE PEDI GRANDE.jpg" alt="Paleta de Pedi Grande" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Paleta de Pedi Grande</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Paleta de Pedi Grande', )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/PALETA PARA COLORES .jpg" alt="Paleta para Colores">
+                            <img src="img/ACCESORIOS/PALETA PARA COLORES .jpg" alt="Paleta para Colores" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Paleta para Colores</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Paleta para Colores', )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/PALITO DE NARANJAS.jpg" alt="Palito de Naranjas">
+                            <img src="img/ACCESORIOS/PALITO DE NARANJAS.jpg" alt="Palito de Naranjas" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Palito de Naranjas</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Palito de Naranjas', )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/PARA COLORES PLACA .jpg" alt="Placa metalica">
+                            <img src="img/ACCESORIOS/PARA COLORES PLACA .jpg" alt="Placa metalica" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Placa Metalica</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Placa metalica', )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/PARA TACK.jpg" alt="Pedestal para Tack">
+                            <img src="img/ACCESORIOS/PARA TACK.jpg" alt="Pedestal para Tack" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Pedestal para Tack</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Pedestal para Tack', )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/PATA CABRTA 1.jpg" alt="Pata de Cabra">
+                            <img src="img/ACCESORIOS/PATA CABRTA 1.jpg" alt="Pata de Cabra" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Pata de Cabra</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Pata de Cabra', )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/PATA DE CABRA.jpg" alt="Pata de Cabra Grande">
+                            <img src="img/ACCESORIOS/PATA DE CABRA.jpg" alt="Pata de Cabra Grande" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Pata de Cabra Grande</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Pata de Cabra Grande', )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/PLACA .jpg" alt="Placa para Colores">
+                            <img src="img/ACCESORIOS/PLACA .jpg" alt="Placa para Colores" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Placa para Colores</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Placa para Colores', )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/PLACA 2.jpg" alt="Placa Figuras">
+                            <img src="img/ACCESORIOS/PLACA 2.jpg" alt="Placa Figuras" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Placa Figuras</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Placa Figuras', )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/REGLA CEJAS.jpg" alt="Regla para Cejas">
+                            <img src="img/ACCESORIOS/REGLA CEJAS.jpg" alt="Regla para Cejas" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Regla para Cejas</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Regla para Cejas', )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/REPUESTO DRILL PEDI.jpg" alt="Repuestos para Drill Pedi">
+                            <img src="img/ACCESORIOS/REPUESTO DRILL PEDI.jpg" alt="Repuestos para Drill Pedi" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Repuestos para Drill Pedi</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Repuestos para Drill Pedi', )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/REPUJADOR.jpg" alt="Repujador">
+                            <img src="img/ACCESORIOS/REPUJADOR.jpg" alt="Repujador" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Repujador</p>
                             <p class="precio-producto">₡1,500</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Repujador', 1500)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/ROLLO MOLDE PLATEADO.jpg" alt="Rollo de moldes plateado">
+                            <img src="img/ACCESORIOS/ROLLO MOLDE PLATEADO.jpg" alt="Rollo de moldes plateado" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Rollo de moldes plateado</p>
                             <p class="precio-producto">₡7,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Rollo de moldes plateado', 7000)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/ROLLO MOLDE.jpg" alt="Rollo Molde ">
+                            <img src="img/ACCESORIOS/ROLLO MOLDE.jpg" alt="Rollo Molde " onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Rollo Molde</p>
                             <p class="precio-producto">₡7,000</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Rollo Molde', 7000)">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/SACUDIDOR.jpg" alt="Sacudidor">
+                            <img src="img/ACCESORIOS/SACUDIDOR.jpg" alt="Sacudidor" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Sacudidor</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Sacudidor', )">Agregar a lista</button>
                         </div>
                         <div class="producto">
-                            <img src="img/ACCESORIOS/SELLO 1.jpg" alt="Sello Stamping">
+                            <img src="img/ACCESORIOS/SELLO 1.jpg" alt="Sello Stamping" onclick="abrirModal(this.src)">
                             <p class="nombre-producto-texto">Sello Stamping</p>
                             <p class="precio-producto">₡</p>
                             <button class="agregar-btn" onclick="agregarAlCarrito('Sello Stamping', )">Agregar a lista</button>
