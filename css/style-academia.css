@@ -1,13 +1,20 @@
 /* ===================================
    Estilos generales para Academia
 =================================== */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #fff;
-    color: #333;
+html, body {
+  height: 100%; /* asegura que body ocupe toda la pantalla */
+  margin: 0;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* empuja el footer hacia abajo */
+}
+
 
 header {
     background: url("../img/FONDO MARMOL.jpg") repeat-x center top;
@@ -158,18 +165,12 @@ nav a:hover {
 =================================== */
 footer {
     background: #92f5f8;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 15px 0;
     font-size: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* sombra para resaltar el texto */
-    position: relative; /* para que no se quede flotando arriba */
-    bottom: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
     width: 100%;
-}
-
-#footer-text {
-    margin: 0;
 }
 
 
