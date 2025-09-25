@@ -122,6 +122,25 @@ h2 {
     color: #55b0e0;
 }
 
+.redes-sociales {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  gap: 25px; /* Espacio entre iconos */
+  margin-top: 15px;
+}
+
+.redes-sociales a {
+  font-size: 32px; /* Tamaño de los iconos */
+  color: #333;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+  color: #e60073; /* Color al pasar el mouse */
+  transform: scale(1.2);
+}
+
+
 .mapa iframe {
     border: 0;
     width: 100%;

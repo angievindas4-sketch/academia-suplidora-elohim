@@ -256,6 +256,8 @@ nav a:hover {
     z-index: 1000;
 }
 
+
+
 .btn-carrito {
     width: 60px;
     height: 60px;
@@ -336,6 +338,19 @@ nav a:hover {
 
 .enviar-btn:hover {
     background-color: #ff1a75;
+}
+
+/* Precio de cada producto en negrita */
+.precio-item {
+  font-weight: bold;
+  color: #000; /* para asegurar buen contraste */
+}
+
+/* Total en negrita y más grande */
+#totalCarrito {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #000;
 }
 
 /* ===================================
