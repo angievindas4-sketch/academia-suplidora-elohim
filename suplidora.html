@@ -17,978 +17,124 @@
     <a href="index.html">Inicio</a>
     <a href="academia.html">Academia</a>
 </nav>
+
 <main>
-    
     <div class="titulo-catalogo-container">
         <h2 class="bienvenida">Catálogo de Productos</h2>
     </div>
     
-<!-- Modal para imagen -->
-<div id="modal-imagen" class="modal">
-    <span id="cerrar-modal">&times;</span>
-    <img class="modal-contenido" id="img-modal">
-</div>
+    <!-- Modal para imagen -->
+    <div id="modalImagen">
+        <img src="" id="img-modal" alt="Producto">
+    </div>
 
-
+    <!-- Grid de categorías -->
     <div class="grid-categorias">
-        <!-- Ejemplo de categoría: Lámparas -->
+        <!-- Categoría 1 -->
         <div class="col">
             <div class="btn-container">
-                <button class="main-btn acordeon">Accesorios</button>
-                <div class="panel">
-                    <div class="productos-grid">
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/ACUARELA VICTORIA .jpg" alt="Acuarela 50 colores" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Acuarela Victoria 50 colores</p>
-                            <p class="precio-producto">₡15,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Acuarela 50 colores', 15000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/ANILLITO CEJAS.jpg" alt="Anillo para goma" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Anillito para Goma</p>
-                            <p class="precio-producto">₡2,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Anillo goma', 2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/ANILLITO CEJAS ROSADO.jpg" alt="Anillo goma rosado" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Anillito para Goma rosado</p>
-                            <p class="precio-producto">₡2,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Anillo goma rosado', 2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/AT TOOL.jpg" alt="Tool para Difuminado" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Tool para Difuminado</p>
-                            <p class="precio-producto">₡2,500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Tool para Difuminado', 2500 )">Agregar a lista</button>
-                        </div>
-                       <div class="producto">
-                            <img src="img/ACCESORIOS/BASE DE CABESOTE.jpg" alt="Base de Cabezote" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Base de Cabezote</p>
-                            <p class="precio-producto">₡2,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Base de Cabezote', 2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/CABEZOTE.jpg" alt="Cabezote para Práctica" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Cabezote para Práctica</p>
-                            <p class="precio-producto">₡12,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Cabezote para Práctica',12000 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/CARGADOR LAMPARA.jpg" alt="Cargador de Lámpara" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Cargador de Lámpara</p>
-                            <p class="precio-producto">₡2,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Cargador de Lámpara',2000 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/CINTA.jpg" alt="Microporo" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Microporo</p>
-                            <p class="precio-producto">₡800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Microporo', 800 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/CORTA TIPS COLOR.jpg" alt="Corta Tips Color" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Corta Tips Color</p>
-                            <p class="precio-producto">₡1,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Corta Tips Color',1000 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/CORTA TIPS CON MEDIDA.jpg" alt="Corta Tips con Medida" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Corta Tips con Medida</p>
-                            <p class="precio-producto">₡2,500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Corta Tips con Medida', 2500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/CORTA TIPS TORNA.jpg" alt="Corta Tips Tornasol" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Corta Tips Tornasol</p>
-                            <p class="precio-producto">₡2,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Corta Tips Tornasol', 2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/CORTA UÑAS.jpg" alt="Corta Uñas Grande" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Corta Uñas Grande</p>
-                            <p class="precio-producto">₡1,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Corta Uñas Grande', 1000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/DEDOS PRACTICA.jpg" alt="Dedos de Práctica" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Dedos de Práctica</p>
-                            <p class="precio-producto">₡350</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Dedos de Práctica',350 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/DISPERSADOR 1.jpg" alt="Dispersador" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Dispersador</p>
-                            <p class="precio-producto">₡1,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Dispersador', 1000 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/ESPEJO DENTAL.jpg" alt="Espejo Dental" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Espejo Dental</p>
-                            <p class="precio-producto">₡2,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Espejo Dental', 2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/ESTERILIZADOR ECO.jpg" alt="Esterilizador Economico" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Esterilizador Economico</p>
-                            <p class="precio-producto">₡3,800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Esterilizador Economico', 3800)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/ESTERILIZADOR POUNCH.jpg" alt="Caja de bolsas para esterilizar" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Caja de bolsas para esterilizar</p>
-                            <p class="precio-producto">₡8,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Caja de bolsas para esterilizar', 8000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/ESTRELLAS TORNASOL.jpg" alt="Cortador de almendra" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Cortador de almendra</p>
-                            <p class="precio-producto">₡2,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Cortador de almendra', 2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/GUANTES FOTO.jpg" alt="Guantes UV Led" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Guantes UV Led</p>
-                            <p class="precio-producto">₡1,800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Guantes UV Led', 1800)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/GUANTES.jpg" alt="Guantes de Nitrilo" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Guantes de Nitrilo</p>
-                            <p class="precio-producto">₡4,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Guantes de Nitrilo', 4000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/KIT DE PINZAS.jpg" alt="Kit de Pinzas" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Kit de Pinzas</p>
-                            <p class="precio-producto">5500₡</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Kit Katana', )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/LIBRO MOSTRARIO.jpg" alt="Libro Mostrario" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Libro Mostrario</p>
-                            <p class="precio-producto">₡6000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Libro Mostrario', )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/MANO PRACTICA ECO.jpg" alt="Mano de Práctica Económica" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Mano de Práctica Económica</p>
-                            <p class="precio-producto">₡5,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Mano de Práctica Económica', 5000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/NIPPER GRANDE.jpg" alt="Nipper Pedicure" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Nipper Pedicure</p>
-                            <p class="precio-producto">₡4000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Nipper Pedicure', )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/NIPPER TORNASOL.jpg" alt="Nipper Tornasol" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Nipper Tornasol</p>
-                            <p class="precio-producto">₡2,800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Nipper Tornasol', 2800)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/PALETA DE PEDI GRANDE.jpg" alt="Paleta de Pedi Grande" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Paleta de Pedi Grande</p>
-                            <p class="precio-producto">₡4500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Paleta de Pedi Grande', )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/PALETA PARA COLORES .jpg" alt="Paleta para Colores" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Paleta para Colores</p>
-                            <p class="precio-producto">₡850</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Paleta para Colores', )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/PALITO DE NARANJAS.jpg" alt="Palito de Naranjas" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Palito de Naranjas</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Palito de Naranjas', )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/PARA COLORES PLACA .jpg" alt="Placa metalica" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Placa Metalica</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Placa metalica', )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/PARA TACK.jpg" alt="Pedestal para Tack" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pedestal para Tack</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pedestal para Tack', )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/PATA CABRTA 1.jpg" alt="Pata de Cabra" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pata de Cabra</p>
-                            <p class="precio-producto">₡500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pata de Cabra', )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/PATA DE CABRA.jpg" alt="Pata de Cabra Grande" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pata de Cabra Grande</p>
-                            <p class="precio-producto">₡500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pata de Cabra Grande', )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/PLACA DE STAMPING.jpg" alt="Placa para Colores" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Placa de Stamping</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Placa para Colores', )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/PLACA PARA MEZCLAR COLORES.jpg" alt="Placa Figuras" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Placa para Mezclar Colores</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Placa Figuras', )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/REGLA CEJAS.jpg" alt="Regla para Cejas" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Regla para Cejas</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Regla para Cejas', )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/REPUESTO DRILL PEDI.jpg" alt="Repuestos para Drill Pedi" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Repuestos para Drill Pedi</p>
-                            <p class="precio-producto">₡5000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Repuestos para Drill Pedi', )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/REPUJADOR.jpg" alt="Repujador" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Repujador</p>
-                            <p class="precio-producto">₡1,500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Repujador', 1500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/ROLLO MOLDE PLATEADO.jpg" alt="Rollo de moldes plateado" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Rollo de moldes plateado</p>
-                            <p class="precio-producto">₡7,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Rollo de moldes plateado', 7000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/ROLLO MOLDE.jpg" alt="Rollo Molde " onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Rollo Molde</p>
-                            <p class="precio-producto">₡7,000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Rollo Molde', 7000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/SACUDIDOR.jpg" alt="Sacudidor" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Sacudidor</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Sacudidor', 2500 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/SELLO 1.jpg" alt="Sello Stamping" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Sello Stamping</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Sello Stamping',2000 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/SET NIPPER CON REPUJADOR.jpg" alt="Nipper con Repujador" onclick="abrirModal(this.src)"
-onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Nipper con Repujador</p>
-                            <p class="precio-producto">₡4000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Nipper con Repujador', 4000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/SET PUNTEROS 1.jpg 2.jpg" alt="Set de Punteros con Silicon" onclick="abrirModal(this.src)"
-onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set de Punteros con Silicon</p>
-                            <p class="precio-producto">₡2800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set de Punteros con Silicon', 2800)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/SET PUNTEROS 2.jpg" alt="Set Punteros" onclick="abrirModal(this.src)"
-onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Punteros</p>
-                            <p class="precio-producto">₡1500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Punteros', 1500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/SET PUNTEROS con liner.jpg" alt="Set Punteros con Linner" onclick="abrirModal(this.src)"
-onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Punteros con Linner</p>
-                            <p class="precio-producto">₡3500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Punteros con Linner', 3500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/SET REPUJADOR}.jpg" alt="Set de Repujador" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set de Repujador</p>
-                            <p class="precio-producto">₡4000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set de Repujador', 4000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/TATAMIENTO ALEMANA.jpg" alt="Tratamiento Alemana" onclick="abrirModal(this.src)"
-onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Tratamiento Alemana</p>
-                            <p class="precio-producto">₡8000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Tratamiento Alemana', 8000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/TAZA OSO.jpg" alt="Taza Oso" onclick="abrirModal(this.src)"
-onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Copa Oso</p>
-                            <p class="precio-producto">₡3500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Taza Oso', 3500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/TIJERA CUTICULA.jpg" alt="Tijera para Cutícula" onclick="abrirModal(this.src)"
-onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Tijera para Cutícula</p>
-                            <p class="precio-producto">5000₡</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Tijera para Cutícula', 5000)">Agregar a lista</button>
-                        </div>
-                       
-                        <div class="producto">
-                            <img src="img/ACCESORIOS/TRATAMIENTO HONGOS.jpg" alt="Tratamiento para Hongos" onclick="abrirModal(this.src)"
-onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Tratamiento para Hongos</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Tratamiento para Hongos', 3000)">Agregar a lista</button>
-                        </div>
-                        <!-- Agrega más productos aquí -->
-                    </div>
-                </div>
+                <a href="muebleria.html">
+                    <button class="main-btn">Mueblería</button>
+                </a>
             </div>
         </div>
 
-         
+        <!-- Categoría 2 -->
         <div class="col">
             <div class="btn-container">
-                <button class="main-btn acordeon">Geles</button>
-                <div class="panel">
-                    <div class="productos-grid">
-                       <div class="producto">
-                            <img src="img/GELES/2 EN 1 GEL BUILDER .jpg" alt="2 EN 1 GEL BUILDER" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">2 en 1 Gel Builder</p>
-                            <p class="precio-producto">₡4000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('2 en 1 Gel Builder', 4000)">Agregar a lista</button>
-                        </div>
-                       <div class="producto">
-                            <img src="img/GELES/ACEITE CUTICULA BEAUTY.jpg" alt="ACEITE DE CUTICULA BEAUTY" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Aceite de Cuticula Beauty</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('ACEITE DE CUTICULA BEAUTY',2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/GELES/ACEITE CUTICULA EVOLUTION.jpg" alt="ACEITE DE CUTICULA EVOLUTION" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Aceite Cuticula Evolution</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('ACEITE DE CUTICULA EVOLUTION', 2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/GELES/ACEITE DE CUTICULA VICT.jpg" alt="ACEITE DE CUTICULA VICTORIA" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Aceite Cuticula Victoria</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('ACEITE DE CUTICULA VICTORIA', 2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/GELES/BUILDER GEL VICTORIA.jpg" alt="BUILDER GEL VICTORIA" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">BUILDER GEL VICTORIA</p>
-                            <p class="precio-producto">₡4500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('BUILDER GEL VICTORIA', 4500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/GELES/METAL LINE GEL VICTORIA.jpg" alt="METAL LINE GEL VICTORIA">
-                            <p class="nombre-producto-texto">METAL LINE GEL VICTORIA</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('METAL LINE GEL VICTORIA', 2500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/GELES/MIRROR GEL VICTORIA.jpg" alt="MIRROR GEL VICTORIA" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">MIRROR GEL VICTORIA</p>
-                            <p class="precio-producto">₡4000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('MIRROR GEL VICTORIA', 4000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/GELES/MIRROR METAL VICTORIA.jpg" alt="MIRROR METAL VICTORIA" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">MIRROR METAL VICTORIA</p>
-                            <p class="precio-producto">₡4000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('MIRROR METAL VICTORIA', 4000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/GELES/PREPARADORES BEAUTY 1 Y 2.jpg" alt="PREPARASORES DE BEAUTY" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Preparadores 1 y 2 Beauty</p>
-                            <p class="precio-producto">₡3500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('PREPARADORES BEAUTY 1 Y 2', 3500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/GELES/PREPARADORES VICTORIA 1 Y 2 15 ML.jpg" alt="PREPARADORES VICTORIA 1 Y 2" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Preparadores 1 y 2 de 15 ml</p>
-                            <p class="precio-producto">₡5000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('PREPARADORES VICTORIA 1 Y 2', 5000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/GELES/PREPARADORES VICTORIA 1 Y 2.jpg" alt="PREPARADORES VICTORIA 1 Y 2 10 ML" onclick="abrirModal(this.src)" >
-                            <p class="nombre-producto-texto">Preparadores 1 y 2 de 10 ml</p>
-                            <p class="precio-producto">₡3500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('PREPARADORES VICTORIA 1 Y 2 10 ML', 3500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/GELES/REMOVEDOR CUTICULA.jpg" alt="REMOVEDOR DE CUTICULA" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Removedor de Cuticula</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('REMOVEDOR DE CUTICULA', 2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/GELES/TOP KASY.jpg" alt="TOP COAT KASY" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Top Coat Kasi</p>
-                            <p class="precio-producto">₡5000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('TOP COAT KASY', 5000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/GELES/ULTRA BOND 10ML.jpg" alt="ULTRA BOND 10ML"  onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Ultra Bond 10 ml</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('ULTRA BOND 10ML', 2500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/GELES/VINS.jpg" alt="VINS" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">VINS</p>
-                            <p class="precio-producto">₡4500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('VINS', 4500)">Agregar a lista</button>
-                        </div>
-                        
-                        <!-- Agrega más productos aquí -->
-                    </div>
-                </div>
+                <a href="accesorios.html">
+                    <button class="main-btn">Accesorios</button>
+                </a>
             </div>
         </div>
-        <!-- Ejemplo de categoría: Pinceles -->
+
+        <!-- Categoría 3 -->
         <div class="col">
             <div class="btn-container">
-                <button class="main-btn acordeon">Pinceles</button>
-                <div class="panel">
-                    <div class="productos-grid">
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL 3D 1800.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel 3D</p>
-                            <p class="precio-producto">₡1800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel 3D', 1800 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL 3D KOLINSKY 6500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel 3D Kolinsky</p>
-                            <p class="precio-producto">₡6500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel 3D Kolinsky', 2800 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL ACRILICO 2500 (2).jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Acrilico</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Acrilico', 2500 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL ACRILICO CORAZONES 2800.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Corazón</p>
-                            <p class="precio-producto">₡2800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Corazón', 2800 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL Acrilico evolution 2500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Acrilico Evolution</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Acrilico Evolution', 2500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL ACRILICO KOLINSKY 12000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Kolinsky #10</p>
-                            <p class="precio-producto">₡12000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Kolinsky #10', 12000 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/2 PINCEL ACUARELLA 1800.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Acuarela</p>
-                            <p class="precio-producto">₡1800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Acuarela', 1800)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL BISELADO 1800.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Biselado</p>
-                            <p class="precio-producto">₡1800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Bicelado', 1800)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL DIFUMINADO 1200 (2).jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Difuminado</p>
-                            <p class="precio-producto">₡1200</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Difuminado', 1200)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL DIFUMINADO 3 1200.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Difuminado</p>
-                            <p class="precio-producto">₡1200</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Difuminado', 1200)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL DIFUMINADOR 1200.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Difuminado</p>
-                            <p class="precio-producto">₡1200</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Difuminado', 1200)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL LENGUA DE GATO MINI 1800.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Mini Lengua de Gato</p>
-                            <p class="precio-producto">₡1800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Mini Lengua de Gato', 1800)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL LENGUA GATO GRANDE 1800.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Lengua de Gato</p>
-                            <p class="precio-producto">₡1800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Lengua de Gato', 1800)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL MANO ALZADA 4 2000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Mano Alzada #4</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Mano Alzada #4', 2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL MIXTOS 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Mixto</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Mixto', 3000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL PARA POLYGEL 2000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Polygel</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Polygel', 2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/SET 3 LINNER ROSA PALO 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set 3 Palo Rosa</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set 3 Palo Rosa', 3000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/SET 15 PINCELES 2000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set 15 Pinceles</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set 15 Pinceles',2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/SET PINCELES ADORO 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Pincel Adoro</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Pincel Adoro', 3000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/SET PINCELES 1 6000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Pinceles</p>
-                            <p class="precio-producto">₡6000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Pinceles', 6000)">Agregar a lista</button>
-                        </div>
-                         <div class="producto">
-                            <img src="img/PINCELES/PINCEL PELITITAS 3D 2800.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Perlitas 3D</p>
-                            <p class="precio-producto">₡2800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('SPincel Perlitas 3D', 6000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL DIFUMINADOR 1200.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Difuminador</p>
-                            <p class="precio-producto">₡1200</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Difuminador', 6000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL PATA DE CABRA 1200.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Pata de Cabra</p>
-                            <p class="precio-producto">₡1200</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Pata de Cabra', 1200)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PUNTEROS COLORES 1500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Punteros Colores</p>
-                            <p class="precio-producto">₡1500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Punteros Colores', 1500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PUNTEROS ROSA 1500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Punteros Rosa</p>
-                            <p class="precio-producto">₡1500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Punteros Rosa', 1500)">Agregar a lista</button>
-                        </div>
-                         <div class="producto">
-                            <img src="img/PINCELES/SET PINCEL EZ FLOW 2000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Flow</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Flow', 2000)">Agregar a lista</button>
-                        </div>
+                <a href="geles.html">
+                    <button class="main-btn">Geles</button>
+                </a>
+            </div>
+        </div>
 
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL ACRILICO 2500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Acrilico</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Acrilico', 2500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/PINCEL LENGUA DE GATO nu2 1800.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pincel Lengua de Gato</p>
-                            <p class="precio-producto">₡1800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pincel Lengua de Gato', 1800)">Agregar a lista</button>
-                        </div>
-                         <div class="producto">
-                            <img src="img/PINCELES/SET LINNER 1,3,5 ROSADOS 3500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Linner 1, 3 y 5</p>
-                            <p class="precio-producto">₡3500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Linner 1, 3 y 5', 1800)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/SET DISEÑO METALICO 2500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Diseño Metálico</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Diseño Metálico, 2500')">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/SET 5 ACRLICO 4500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set de Acrilicos</p>
-                            <p class="precio-producto">₡4500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set de Acrilicos, 4500')">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/SET 3 DISEÑO ROSADO 1800.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set 3 Diseño</p>
-                            <p class="precio-producto">₡1800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set 3 Diseño', 1800)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/SET DISEÑO Y LINNER.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Diseño y Linner</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Diseño y Linner', 2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/SET LINNER 2000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Linner</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Linner', 2000)">Agregar a lista</button>
-                        </div>
-                         <div class="producto">
-                            <img src="img/PINCELES/SET LINNER 5 UNI BEAUTY 3500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Linner Beauty</p>
-                            <p class="precio-producto">₡3500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Linner Beauty', 3500)">Agregar a lista</button>
-                        </div>
-                         <div class="producto">
-                            <img src="img/PINCELES/SET PINCEL CEBRA 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Acebrado</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Acebrado', 3000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/TEXTURIZADOR 2800.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Texturizador</p>
-                            <p class="precio-producto">₡2800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Texturizador', 2800)">Agregar a lista</button>
-                        </div>
-                         <div class="producto">
-                            <img src="img/PINCELES/SET SILICON 2800.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Silicon</p>
-                            <p class="precio-producto">₡2800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Silicon', 2800)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/PINCELES/SET LINNER Y DISEÑO.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Linner y Diseño</p>
-                            <p class="precio-producto">₡3500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Linner y Diseño', 3500)">Agregar a lista</button>
-                        </div>
-                         <div class="producto">
-                            <img src="img/PINCELES/SET LINNER TORNASOL 2500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Linner Tornasol</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Linner Tornasol', 2500)">Agregar a lista</button>
-                        </div>
-                         
-                    </div>
-                </div>
+        <!-- Categoría 4 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="pinceles.html">
+                    <button class="main-btn">Pinceles</button>
+                </a>
             </div>
         </div>
 
         
+        <!-- Categoría 5 -->
         <div class="col">
             <div class="btn-container">
-                <button class="main-btn acordeon">Decoración</button>
-                <div class="panel">
-                    <div class="productos-grid">
-                        <div class="producto">
-                            <img src="img/DECORACION/BALINES 2000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Balines</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Balines', 2000 )">Agregar a lista</button>
-                        </div>  
-                        <div class="producto">
-                            <img src="img/DECORACION/CARTERA DE PERLAS 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Cartera de Perlas</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Cartera de Perlas', 3000 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECO ALAMBRES .jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Decoración Alambres</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Decoración Alambres',  2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECO COLA SIRE 1 - 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Cola sirena 1</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Cola sirena 1', 3000 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECO COLA SIRE 11  - 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Cola sirena 11</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Cola sirena 11', 3000 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECO COLA SIRE 13 - 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Cola Sirena 13</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Cola sirena 11', 3000 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECO COLA SIRE 2 - 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Cola Sirena 2</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Cola Sirena 2', 3000 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECO COLA SIRE 6 - 3000 (2).jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Cola Sirena 6</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Cola Sirena 6', 3000 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECO COLA SIRE PEQUE - 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Cola Sirena Pequeña</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Cola Sirena Pequeña', 3000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECO CON FLORES Y PEDRERIA - 2000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Flores y Pedreria</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Flores y Pedreria', 2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECO CONCHA NACAR -2500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Cocha de Nacar</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Cocha de Nacar', 2500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECO CORAZONES - 2500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Decoración Corazones Colores</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Decoración Corazones Colores', 2500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECO FLORES 1500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Decoración Flores</p>
-                            <p class="precio-producto">₡1500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Decoración Flores',1500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECO HOJA ORO 2000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Hoja de Oro</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Hoja de Oro',2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECO LAZOS 1500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Decoración Lazos</p>
-                            <p class="precio-producto">₡1500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Decoración Lazos',1500)">Agregar a lista</button>
-                        </div>
+                <a href="brocas.html">
+                    <button class="main-btn">Brocas</button>
+                </a>
+            </div>
+        </div>
 
-                        <div class="producto">
-                            <img src="img/DECORACION/DECO NATU MUERTA 2500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Naturaleza Muerta</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Naturaleza Muerta', 2500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECO ROJA CORA 2500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Corazones Rojos</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Corazones Rojos',2500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECORACION 2500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Decoración Mixta</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Decoración Mixta',2500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECORACION 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Cola Sirena 5</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Cola Sirena 5',3000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECORACION 3000 (2).jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Decoración Mixta A</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Decoración Mixta', 3000)">Agregar a lista</button>
-                        </div>
-                        
-                        <div class="producto">
-                            <img src="img/DECORACION/DECORACION B 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Decoración Mixta B</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Decoración Mixta B',3000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECORACION C 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Decoración Mixta C</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Decoración Mixta C', 3000 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECORACION D 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Decoración Mixta D</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Decoración Mixta D',3000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECORACION F 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Decoración Mixta F</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Decoración Mixta F',3000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/DECORACION DE MAR 2500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Decoración de Mar</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Decoración de Mar', 2500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/EFECTO AURORA 5000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Efecto Aurora</p>
-                            <p class="precio-producto">₡5000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Efecto Aurora', 5000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/EFECTO ESPEJO 3 1500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Efecto Espejo 3</p>
-                            <p class="precio-producto">₡1500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Efecto Espejo 3', 1500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/EFECTO SUGAR COLORES NEUTROS 2000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Efecto Suggar Neutros</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Efecto Suggar Neutros', 2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/FLAKE 2800.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Flake</p>
-                            <p class="precio-producto">₡2800</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Flake',2800)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/FLORES 3D 3000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Flores 3D</p>
-                            <p class="precio-producto">₡3000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Flores 3D', 3000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/FRASCO GRANDE HOJA DE ORO 1500 C-U.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Hoja de Oro</p>
-                            <p class="precio-producto">₡1500 c/u</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Hoja de Oro', 1500 )">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/HOJA DE ORO FRASCO 1000 C-U.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Hoja de Oro Pequeño</p>
-                            <p class="precio-producto">₡1000 c/u</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Hoja de Oro Pequeño', 1000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/HOJA ORO 1 2000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Hoja de Oro Variado</p>
-                            <p class="precio-producto">₡2000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Hoja de Oro Variado',2000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/MICROBALINES 1500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Microbalines</p>
-                            <p class="precio-producto">₡1500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Microbalines', 1500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/PEDRERIA 1 3500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pedreria Verde Oscuro</p>
-                            <p class="precio-producto">₡3500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pedreria Verde Oscuro', 3500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/PEDRERIA OPAL 1500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pedreria Opal</p>
-                            <p class="precio-producto">₡1500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pedreria Opal',1500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/PEDRERIA TORNASOL 2500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Pedreria Tornasol</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Pedreria Tornasol', 2500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/SET EFECTO AURORA 2 - 5000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Efecto Aurora 2</p>
-                            <p class="precio-producto">₡5000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Efecto Aurora 2', 5000)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/SET EFECTO ESPEJO 2500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Efecto Espejo</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Efecto Espejo',2500)">Agregar a lista</button>
-                        </div>
-                         <div class="producto">
-                            <img src="img/DECORACION/SET EFECTO ESPEJO 6 - 5000.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Set Efecto Espejo 6</p>
-                            <p class="precio-producto">₡5000</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Set Efecto Espejo 6', 5000)">Agregar a lista</button>
-                        </div>
-                         <div class="producto">
-                            <img src="img/DECORACION/STICKERS 450 U (2).jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Variedad en Stickes</p>
-                            <p class="precio-producto">₡450</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Variedad en Stickes',450)">Agregar a lista</button>
-                        </div>
-                         <div class="producto">
-                            <img src="img/DECORACION/STICKERS 450 U.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Variedad en Stickers</p>
-                            <p class="precio-producto">₡450</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Variedad en Stickers', 450)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/SUGGAR 12 UNI 2500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Suggar 12 Unidades</p>
-                            <p class="precio-producto">₡2500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Suggar 12 Unidades', 2500)">Agregar a lista</button>
-                        </div>
-                        <div class="producto">
-                            <img src="img/DECORACION/UNIDAD EFECTO AURORA 1500.jpg" alt="" onclick="abrirModal(this.src)">
-                            <p class="nombre-producto-texto">Unidad Efecto Aurora</p>
-                            <p class="precio-producto">₡1500</p>
-                            <button class="agregar-btn" onclick="agregarAlCarrito('Unidad Efecto Aurora', 1500)">Agregar a lista</button>
-                        </div>
-                    </div>
-                </div>
+        <!-- Categoría 6 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="glowspa.html">
+                    <button class="main-btn">Glow Spa</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Categoría 7 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="removedoresysolventes.html">
+                    <button class="main-btn">Removedores y Pinceles</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Categoría 8 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="acrilicosymonomeros.html">
+                    <button class="main-btn">Acrílicos y Monómeros</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Categoría 9 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="maquillajeypestañas.html">
+                    <button class="main-btn">Maquillaje y Pestañas</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Categoría 10 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="electrico.html">
+                    <button class="main-btn">Eléctrico</button>
+                </a>
             </div>
         </div>
     </div>
+   
+    <!-- Categoría 11 -->
+        
+        <div class="col">
+            <div class="btn-container">
+                <a href="tips.html">
+                    <button class="main-btn">Tips</button>
+                </a>
+            </div>
+        </div>
 </main>
 
 <!-- Carrito flotante -->
- <section>
-    <aside class="carrito">
+<aside class="carrito">
     <button class="btn-carrito">🛒</button>
     <div class="contenido-carrito">
         <h3>Tu Lista de Productos</h3>
@@ -998,7 +144,6 @@ onclick="abrirModal(this.src)">
         <button onclick="enviarWhatsApp()" class="enviar-btn">Enviar a WhatsApp</button>
     </div>
 </aside>
-</section>
 
 <footer>
     <p id="footer-text">By Freelancer Anyelith Nuñez Vindas &copy; <span id="anio"></span></p>
@@ -1007,7 +152,39 @@ onclick="abrirModal(this.src)">
 <script src="js/script-suplidora.js"></script>
 
 <script>
+    // Actualiza año en footer
     document.getElementById("anio").textContent = new Date().getFullYear();
+
+    // Modal funcional
+    const modal = document.getElementById('modalImagen');
+    const modalImg = document.getElementById('img-modal');
+    let ultimaSrc = "";
+
+    function abrirModal(src) {
+        if(modal.classList.contains('show') && ultimaSrc === src){
+            modal.classList.remove('show');
+            ultimaSrc = "";
+        } else {
+            modalImg.src = src;
+            modal.classList.add('show');
+            ultimaSrc = src;
+        }
+    }
+
+    modalImg.addEventListener('click', () => {
+        modal.classList.remove('show');
+        ultimaSrc = "";
+    });
+
+    // Toggle carrito flotante
+    document.addEventListener("DOMContentLoaded", () => {
+        const carritoBtn = document.querySelector(".btn-carrito");
+        const contenido = document.querySelector(".contenido-carrito");
+
+        carritoBtn.addEventListener("click", () => {
+            contenido.classList.toggle("abierto");
+        });
+    });
 </script>
 
 </body>

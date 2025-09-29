@@ -163,29 +163,21 @@ nav a:hover {
 =================================== */
 .grid-categorias {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 60px;
-    margin: 30px auto;
     flex-wrap: wrap;
-    max-width: 1200px;
-}
-
-.col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     gap: 30px;
-    width: 100%; /* asegura que el panel no se monte al lado */
+    max-width: 1200px;
+    margin: 30px auto;
 }
 
-.btn-container {
-    width: 100%;
+/* Cada columna ocupa un tercio del ancho */
+.col {
+    flex: 0 0 calc(33.333% - 20px); /* 3 columnas con espacio entre ellas */
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
-
+/* --- Botones de categorías --- */
 .main-btn {
     background-color: #ff99cc;
     color: white;
@@ -195,13 +187,50 @@ nav a:hover {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    transition: 0.3s;
-    width: 300px;
+    transition: all 0.4s ease; /* transición suave */
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* sombra inicial */
+    transform: translateY(0); /* animación de flotación */
 }
 
+/* Hover: flotación y aumento */
 .main-btn:hover {
     background-color: #ff66aa;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+    transform: translateY(-5px) scale(1.05);
 }
+
+/* Animación de aparición */
+.btn-container {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+/* Keyframes de fade-in + flotación */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Retrasos para efecto cascada */
+.col:nth-child(1) .btn-container { animation-delay: 0s; }
+.col:nth-child(2) .btn-container { animation-delay: 0.1s; }
+.col:nth-child(3) .btn-container { animation-delay: 0.2s; }
+.col:nth-child(4) .btn-container { animation-delay: 0.3s; }
+.col:nth-child(5) .btn-container { animation-delay: 0.4s; }
+.col:nth-child(6) .btn-container { animation-delay: 0.5s; }
+.col:nth-child(7) .btn-container { animation-delay: 0.6s; }
+.col:nth-child(8) .btn-container { animation-delay: 0.7s; }
+.col:nth-child(9) .btn-container { animation-delay: 0.8s; }
+.col:nth-child(10) .btn-container { animation-delay: 0.9s; }
+.col:nth-child(11) .btn-container { animation-delay: 1s; }
+
 
 /* Panel de productos */
 .panel {
@@ -375,7 +404,7 @@ nav a:hover {
 #totalCarrito {
   font-weight: bold;
   font-size: 1.1rem;
-  color: #000;
+  color: #480707;
 }
 
 /* ===================================
@@ -395,17 +424,16 @@ footer {
 
 
 
-/* ===================================
-   Responsive
-=================================== */
-@media(max-width:900px) {
-    .panel .productos-grid {
-        grid-template-columns: repeat(2, 1fr);
+/* Ajuste responsivo para tabletas */
+@media (max-width: 900px) {
+    .col {
+        flex: 0 0 calc(50% - 20px); /* 2 columnas */
     }
 }
 
-@media(max-width:600px) {
-    .panel .productos-grid {
-        grid-template-columns: 1fr;
+/* Ajuste responsivo para móviles */
+@media (max-width: 600px) {
+    .col {
+        flex: 0 0 100%; /* 1 columna */
     }
 }

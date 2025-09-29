@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mueblería - Suplidora</title>
+    <link rel="stylesheet" href="style.acrilicosymonomeros.css">
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Suplidora de Uñas Elohim</h1>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="suplidora.html">Regresar a las categorías del catálogo </a>
+    </nav>
+
+    <!-- Título de la categoría -->
+    <div class="titulo-catalogo-container">
+        <h2 class="bienvenida">Acrilicos y Monomeros</h2>
+    </div>
+
+    <!-- Panel de productos -->
+    <div class="panel show">
+        <div class="productos-grid">
+            <!-- Producto 1 -->
+           <div class="producto">
+                            <img src="img/ACRILICOS Y MONOMEROS/BABY PINK 0.5 OZ.jpeg" alt="" onclick="abrirModal(this.src)">
+                            <p class="nombre-producto-texto">Baby Pink 0.5oz</p>
+                            <p class="precio-producto">₡2250</p>
+                            <button class="agregar-btn" onclick="agregarAlCarrito('Baby Pink 0.5oz', 2250)">Agregar a lista</button>
+                        </div>
+                        <div class="producto">
+                            <img src="" alt="" onclick="abrirModal(this.src)">
+                            <p class="nombre-producto-texto"></p>
+                            <p class="precio-producto">₡</p>
+                            <button class="agregar-btn" onclick="agregarAlCarrito('', )">Agregar a lista</button>
+                        </div>
+                         <div class="producto">
+                            <img src="" alt="" onclick="abrirModal(this.src)">
+                            <p class="nombre-producto-texto"></p>
+                            <p class="precio-producto">₡</p>
+                            <button class="agregar-btn" onclick="agregarAlCarrito('', )">Agregar a lista</button>
+                        </div>
+                         <div class="producto">
+                            <img src="" alt="" onclick="abrirModal(this.src)">
+                            <p class="nombre-producto-texto"></p>
+                            <p class="precio-producto">₡</p>
+                            <button class="agregar-btn" onclick="agregarAlCarrito('', )">Agregar a lista</button>
+                        </div>
+                         <div class="producto">
+                            <img src="" alt="" onclick="abrirModal(this.src)">
+                            <p class="nombre-producto-texto"></p>
+                            <p class="precio-producto">₡</p>
+                            <button class="agregar-btn" onclick="agregarAlCarrito('', )">Agregar a lista</button>
+                        </div>
+                         <div class="producto">
+                            <img src="" alt="" onclick="abrirModal(this.src)">
+                            <p class="nombre-producto-texto"></p>
+                            <p class="precio-producto">₡</p>
+                            <button class="agregar-btn" onclick="agregarAlCarrito('', )">Agregar a lista</button>
+                        </div>
+                         <div class="producto">
+                            <img src="" alt="" onclick="abrirModal(this.src)">
+                            <p class="nombre-producto-texto"></p>
+                            <p class="precio-producto">₡</p>
+                            <button class="agregar-btn" onclick="agregarAlCarrito('', )">Agregar a lista</button>
+                        </div>
+        </div>
+    </div>
+
+    <!-- Modal de imagen -->
+<div id="modalImagen">
+    <img id="img-modal" src="" alt="Producto">
+</div>
+
+ <!-- Carrito flotante -->
+    <div class="carrito">
+        <button class="btn-carrito" onclick="toggleCarrito()">🛒</button>
+        <div class="contenido-carrito" id="contenidoCarrito">
+            <h3>Tu Lista de Productos</h3>
+            <ul id="listaCarrito"></ul>
+            <p id="totalCarrito">Total: ₡0</p>
+            <button class="enviar-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p id="footer-text">By Freelancer Anyelith Nuñez Vindas &copy; <span id="anio"></span></p>
+    </footer>
+
+ 
+
+<!-- Script global -->
+<script src="js/script-suplidora.js"></script>
+
+</body>
+</html>

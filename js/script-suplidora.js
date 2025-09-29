@@ -16,41 +16,54 @@ acordeones.forEach(btn => {
     });
 });
 
+// ==========================
+// Modal toggle con zoom
+// ==========================
+const modal = document.getElementById('modalImagen');
+const modalImg = modal.querySelector('img'); // Imagen dentro del modal
+let ultimaSrc = "";
+
 function abrirModal(src) {
-    let modal = document.getElementById('modalImagen');
-    if (!modal) {
-        modal = document.createElement('div');
-        modal.id = 'modalImagen';
-        document.body.appendChild(modal);
-
-        modal.onclick = function() {
-            modal.classList.remove('show'); // Fade out
-            setTimeout(() => {
-                modal.style.display = 'none';
-                modal.innerHTML = '';
-            }, 300); // espera a que termine la animación
-        };
+    if(modal.classList.contains('show') && ultimaSrc === src){
+        modal.classList.remove('show');
+        ultimaSrc = "";
+    } else {
+        modalImg.src = src;
+        modal.classList.add('show');
+        ultimaSrc = src;
     }
-
-    const img = document.createElement('img');
-    img.src = src;
-    modal.innerHTML = '';
-    modal.appendChild(img);
-
-    modal.style.display = 'flex';
-    setTimeout(() => {
-        modal.classList.add('show'); // Fade in
-    }, 10);
 }
 
+modalImg.addEventListener('click', () => {
+    modal.classList.remove('show');
+    ultimaSrc = "";
+});
+
 // ==========================
-// Carrito
+// Carrito global usando localStorage
 // ==========================
 let carrito = [];
 
+// Cargar carrito guardado al iniciar
+if(localStorage.getItem('carrito')) {
+    carrito = JSON.parse(localStorage.getItem('carrito'));
+    actualizarCarrito();
+}
+
 function agregarAlCarrito(nombre, precio) {
     carrito.push({ nombre, precio });
+    guardarCarrito();
     actualizarCarrito();
+}
+
+function eliminarDelCarrito(index) {
+    carrito.splice(index, 1);
+    guardarCarrito();
+    actualizarCarrito();
+}
+
+function guardarCarrito() {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
 function actualizarCarrito() {
@@ -63,7 +76,6 @@ function actualizarCarrito() {
 
         const li = document.createElement("li");
 
-        // Contenedor del nombre con botón eliminar
         const nombreDiv = document.createElement("div");
         nombreDiv.classList.add("nombre-producto");
 
@@ -79,7 +91,6 @@ function actualizarCarrito() {
         nombreDiv.appendChild(btnEliminar);
         li.appendChild(nombreDiv);
 
-        // Precio del producto
         const precioP = document.createElement("p");
         precioP.textContent = `₡${item.precio.toLocaleString()}`;
         li.appendChild(precioP);
@@ -88,11 +99,6 @@ function actualizarCarrito() {
     });
 
     document.getElementById("totalCarrito").textContent = `Total: ₡${total.toLocaleString()}`;
-}
-
-function eliminarDelCarrito(index) {
-    carrito.splice(index, 1);
-    actualizarCarrito();
 }
 
 // ==========================

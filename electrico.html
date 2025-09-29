@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eléctrico - Suplidora</title>
+    <link rel="stylesheet" href="css/style-suplidora.css">
+    <style>
+        /* Modal básico */
+        #modalImagen {
+            display: none;
+            position: fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            z-index:1000;
+        }
+        #modalImagen.show { display:flex; }
+        #modalImagen img {
+            max-width:90%;
+            max-height:90%;
+        }
+        #cerrar-modal {
+            position: absolute;
+            top:10px;
+            right:20px;
+            font-size:2rem;
+            color:#fff;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Suplidora de Uñas Elohim</h1>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="suplidora.html">Regresar a las categorías del catálogo</a>
+    </nav>
+
+    <!-- Título de la categoría -->
+    <div class="titulo-catalogo-container">
+        <h2 class="bienvenida">Eléctrico</h2>
+    </div>
+
+    <!-- Panel de productos -->
+    <div class="productos-grid">
+        <div class="producto">
+            <img src="img/ELECTRICOS/DRILL_45RPM MESA 35000.jpg" alt="Drill Mesa 45RPM" onclick="abrirModal(this.src)">
+            <p class="nombre-producto-texto">Drill Mesa 45RPM</p>
+            <p class="precio-producto">₡35000</p>
+            <button class="agregar-btn" onclick="agregarAlCarrito('Drill Mesa 45RPM', 35000)">Agregar a lista</button>
+        </div>
+        <!-- Más productos aquí -->
+    </div>
+
+    
+    <!-- Modal de imagen -->
+<div id="modalImagen">
+    <img id="img-modal" src="" alt="Producto">
+</div>
+ <!-- Carrito flotante -->
+    <div class="carrito">
+        <button class="btn-carrito" onclick="toggleCarrito()">🛒</button>
+        <div class="contenido-carrito" id="contenidoCarrito">
+            <h3>Tu Lista de Productos</h3>
+            <ul id="listaCarrito"></ul>
+            <p id="totalCarrito">Total: ₡0</p>
+            <button class="enviar-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p id="footer-text">By Freelancer Anyelith Nuñez Vindas &copy; <span id="anio"></span></p>
+    </footer>
+
+<script src="js/script-suplidora.js"></script>
+
+</body>
+</html>
