@@ -188,7 +188,7 @@ nav a:hover {
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.4s ease; /* transición suave */
-    width: 250px;
+    width: 300px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* sombra inicial */
     transform: translateY(0); /* animación de flotación */
 }
@@ -230,6 +230,7 @@ nav a:hover {
 .col:nth-child(9) .btn-container { animation-delay: 0.8s; }
 .col:nth-child(10) .btn-container { animation-delay: 0.9s; }
 .col:nth-child(11) .btn-container { animation-delay: 1s; }
+.col:nth-child(12) .btn-container { animation-delay: 1s; }
 
 
 /* Panel de productos */
