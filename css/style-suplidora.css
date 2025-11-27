@@ -1,39 +1,98 @@
-/* ==========================
-   Tipografías y generales
-========================== */
+/* ===================================
+   Estilos generales
+=================================== */
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     background: #fff;
     color: #333;
 }
 
-h1, h2 {
-    margin: 0;
-    padding: 0;
-}
-
-/* ==========================
-   Encabezado
-========================== */
+/* ===================================
+   Header unificado para todas las páginas
+=================================== */
 header {
-    background: linear-gradient(45deg, #ff8ec7, #7fe3d3);
+    background: url("../img/FONDO MARMOL.jpg") repeat-x center top;
+    background-size: auto 180px; /* ajusta la altura de la imagen */
     color: white;
-    padding: 20px;
     text-align: center;
+    height: 150px; /* altura uniforme */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.academia-titulo {
-    font-family: "Dancing Script", cursive;
-    font-size: 2.5rem;
+header h1 {
+    margin: 0;
+    font-size: 40px; /* mismo tamaño para todos */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* sombra para resaltar */
+    color: white;
 }
+
+
+/* ===================================
+   Menú de navegación
+=================================== */
+nav {
+    background: #92f5f8; /* celeste */
+    display: flex;
+    justify-content: center;
+    gap: 140px; /* separación entre enlaces */
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #ff99cc;
+    border-radius: 5px;
+}
+
+/* ===================================
+   Botones principales
+=================================== */
+.inicio {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px 20px;
+    flex-wrap: wrap;
+}
+
+.main-btn {
+    background-color: #ff99cc;
+    color: white;
+    font-size: 2rem;
+    padding: 40px 60px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background-color: #ff66aa;
+}
+
+
 
 /* ==========================
    Barra de navegación
 ========================== */
 nav {
-    background: #f3f3f3;
+    background: #92f5f8; /* celeste */
+    background: ;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -43,13 +102,13 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     font-weight: bold;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #ff58a6;
+    color: #ffffff;
 }
 
 /* ==========================
@@ -137,15 +196,126 @@ nav a:hover {
 /* ==========================
    Footer
 ========================== */
+/* ===================================
+   Footer
+=================================== */
 footer {
-    background: #f7f7f7;
+    background: #92f5f8;
+    color: rgb(255, 255, 255);
     text-align: center;
-    padding: 15px;
-    margin-top: 30px;
-    border-top: 2px solid #ddd;
+    padding: 15px 0;
+    font-size: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    width: 100%;
 }
 
 #footer-text {
     color: #666;
     font-weight: bold;
 }
+
+/* =====================================================
+   CARRITO NUEVO (MODERNO Y FLOTANTE)
+   — Compatible con tu diseño viejo
+===================================================== */
+
+.carrito {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.btn-carrito {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ff99cc;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.btn-carrito:hover {
+    background: #ff66aa;
+}
+
+.contenido-carrito {
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #92f5f8;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.contenido-carrito.abierto {
+    display: block;
+}
+
+.contenido-carrito ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nombre-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.eliminar-btn {
+    background-color: #ff66aa;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+
+.eliminar-btn:hover {
+    background-color: #ff3388;
+}
+
+.precio-item {
+    color: #000;
+    font-weight: bold;
+}
+
+#totalCarrito {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 10px;
+}
+
+.enviar-btn {
+    background: #ff3388;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.enviar-btn:hover {
+    background: #ff1a75;
+}
+
