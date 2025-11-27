@@ -66,7 +66,6 @@
             </div>
         </div>
 
-        
         <!-- Categoría 5 -->
         <div class="col">
             <div class="btn-container">
@@ -121,9 +120,7 @@
             </div>
         </div>
     
-   
-    <!-- Categoría 11 -->
-        
+        <!-- Categoría 11 -->
         <div class="col">
             <div class="btn-container">
                 <a href="tips.html">
@@ -133,7 +130,6 @@
         </div>
 
         <!-- Categoría 12 -->
-        
         <div class="col">
             <div class="btn-container">
                 <a href="decoracion.html">
@@ -144,17 +140,6 @@
     </div>    
 </main>
 
-<!-- Carrito flotante -->
-<aside class="carrito">
-    <button class="btn-carrito">🛒</button>
-    <div class="contenido-carrito">
-        <h3>Tu Lista de Productos</h3>
-        <ul id="listaCarrito"></ul>
-        <p id="totalCarrito">Total: ₡0</p>
-        <p style="color:rgb(7,7,7); font-size:0.8rem;">*Recuerda: Todos los envíos tienen un costo adicional según tu ubicación.</p>
-        <button onclick="enviarWhatsApp()" class="enviar-btn">Enviar a WhatsApp</button>
-    </div>
-</aside>
 
 <footer>
     <p id="footer-text">By Freelancer Anyelith Nuñez Vindas &copy; <span id="anio"></span></p>
@@ -166,36 +151,28 @@
     // Actualiza año en footer
     document.getElementById("anio").textContent = new Date().getFullYear();
 
-    // Modal funcional
-    const modal = document.getElementById('modalImagen');
+    // Modal funcional (renombrado para evitar conflicto con script externo)
+    const modalImgContainer = document.getElementById('modalImagen');
     const modalImg = document.getElementById('img-modal');
     let ultimaSrc = "";
 
     function abrirModal(src) {
-        if(modal.classList.contains('show') && ultimaSrc === src){
-            modal.classList.remove('show');
+        if (modalImgContainer.classList.contains('show') && ultimaSrc === src) {
+            modalImgContainer.classList.remove('show');
             ultimaSrc = "";
         } else {
             modalImg.src = src;
-            modal.classList.add('show');
+            modalImgContainer.classList.add('show');
             ultimaSrc = src;
         }
     }
 
     modalImg.addEventListener('click', () => {
-        modal.classList.remove('show');
+        modalImgContainer.classList.remove('show');
         ultimaSrc = "";
     });
 
-    // Toggle carrito flotante
-    document.addEventListener("DOMContentLoaded", () => {
-        const carritoBtn = document.querySelector(".btn-carrito");
-        const contenido = document.querySelector(".contenido-carrito");
-
-        carritoBtn.addEventListener("click", () => {
-            contenido.classList.toggle("abierto");
-        });
-    });
+    
 </script>
 
 </body>

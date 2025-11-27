@@ -1,440 +1,151 @@
-/* ===================================
-   Estilos generales
-=================================== */
+/* ==========================
+   Tipografías y generales
+========================== */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     background: #fff;
     color: #333;
 }
 
-/* ===================================
-   Header unificado para todas las páginas
-=================================== */
-header {
-    background: url("../img/FONDO MARMOL.jpg") repeat-x center top;
-    background-size: auto 180px; /* ajusta la altura de la imagen */
-    color: white;
-    text-align: center;
-    height: auto; /* altura uniforme */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-main {
-  flex: 1; /* empuja el footer hacia abajo */
-}
-
-/* ===================================
-   Header unificado para todas las páginas
-=================================== */
-header {
-    background: url("../img/FONDO MARMOL.jpg") repeat-x center top;
-    background-size: auto 180px; /* ajusta la altura de la imagen */
-    color: white;
-    text-align: center;
-    height: 150px; /* altura uniforme */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-header h1 {
+h1, h2 {
     margin: 0;
-    font-size: 40px; /* mismo tamaño para todos */
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* sombra para resaltar */
-    color: white;
+    padding: 0;
 }
 
+/* ==========================
+   Encabezado
+========================== */
+header {
+    background: linear-gradient(45deg, #ff8ec7, #7fe3d3);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-/* ===================================
-   Centrar título del catálogo
-=================================== */
+.academia-titulo {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.5rem;
+}
+
+/* ==========================
+   Barra de navegación
+========================== */
+nav {
+    background: #f3f3f3;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff58a6;
+}
+
+/* ==========================
+   Título Catálogo
+========================== */
 .titulo-catalogo-container {
     text-align: center;
     margin: 20px 0;
 }
 
 .bienvenida {
-    font-size: 2.2rem; /* ajusta tamaño si quieres */
-    color: #ff99cc;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #444;
 }
 
-/* --- Modal Imagen --- */
+/* ==========================
+   Grid de categorías
+========================== */
+.grid-categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.col {
+    text-align: center;
+}
+
+.btn-container {
+    width: 100%;
+}
+
+.main-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(45deg, #ff74bd, #59d7c4);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* ==========================
+   Modal para imágenes
+========================== */
 #modalImagen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.8);
-
-    /* 👇 importante: oculto por defecto para no tapar el catálogo */
+    background: rgba(0,0,0,0.8);
     display: none;
-    align-items: center;
     justify-content: center;
-
-    z-index: 1000;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    align-items: center;
+    z-index: 999;
 }
 
-/* Cuando se activa el modal */
 #modalImagen.show {
-    display: flex; /* 👈 aparece centrado */
-    opacity: 1;
+    display: flex;
 }
 
-/* Imagen dentro del modal */
 #modalImagen img {
     max-width: 90%;
     max-height: 90%;
-    transform: scale(0.7);
-    transition: transform 0.3s ease;
-}
-
-/* Efecto zoom al abrir */
-#modalImagen.show img {
-    transform: scale(1);
-}
-
-/* Botón de cerrar (la X) */
-#cerrar-modal {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    z-index: 1100;
-    transition: color 0.2s ease;
-}
-
-#cerrar-modal:hover {
-    color: #ff5c5c;
-}
-
-/* Header principal */
-header h1 {
-    margin: 0;
-    font-size: 40px; /* ~40px */
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* sombra más fuerte */
-}
-
-/* Ajuste para pantallas pequeñas (móviles) */
-@media(max-width:768px){
-    header h1 {
-        font-size: 32px; /* tamaño más cómodo en móviles */
-        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
-    }
-}
-
-nav {
-    background: #92f5f8;
-    display: flex;
-    justify-content: center;
-    gap: 140px;
-    padding: 10px 0;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 15px;
-    font-size: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    transition: 0.3s;
-}
-
-nav a:hover {
-    background-color: #ff99cc;
-    border-radius: 5px;
-}
-
-/* ===================================
-   Grid de categorías y productos
-=================================== */
-.grid-categorias {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 30px auto;
-}
-
-/* Cada columna ocupa un tercio del ancho */
-.col {
-    flex: 0 0 calc(33.333% - 20px); /* 3 columnas con espacio entre ellas */
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-/* --- Botones de categorías --- */
-.main-btn {
-    background-color: #ff99cc;
-    color: white;
-    font-size: 1.8rem;
-    padding: 20px 40px;
-    margin: 15px 0;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.4s ease; /* transición suave */
-    width: 300px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* sombra inicial */
-    transform: translateY(0); /* animación de flotación */
-}
-
-/* Hover: flotación y aumento */
-.main-btn:hover {
-    background-color: #ff66aa;
-    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
-    transform: translateY(-5px) scale(1.05);
-}
-
-/* Animación de aparición */
-.btn-container {
-    animation: fadeInUp 0.8s ease forwards;
-    opacity: 0;
-}
-
-/* Keyframes de fade-in + flotación */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Retrasos para efecto cascada */
-.col:nth-child(1) .btn-container { animation-delay: 0s; }
-.col:nth-child(2) .btn-container { animation-delay: 0.1s; }
-.col:nth-child(3) .btn-container { animation-delay: 0.2s; }
-.col:nth-child(4) .btn-container { animation-delay: 0.3s; }
-.col:nth-child(5) .btn-container { animation-delay: 0.4s; }
-.col:nth-child(6) .btn-container { animation-delay: 0.5s; }
-.col:nth-child(7) .btn-container { animation-delay: 0.6s; }
-.col:nth-child(8) .btn-container { animation-delay: 0.7s; }
-.col:nth-child(9) .btn-container { animation-delay: 0.8s; }
-.col:nth-child(10) .btn-container { animation-delay: 0.9s; }
-.col:nth-child(11) .btn-container { animation-delay: 1s; }
-.col:nth-child(12) .btn-container { animation-delay: 1s; }
-
-
-/* Panel de productos */
-.panel {
-    display: none;
-    background: #fff0f5;
     border-radius: 10px;
-    padding: 15px;
-    width: 100%;        /* que use todo el ancho disponible */
-    margin-top: 20px;   /* espacio entre el botón y el panel */
-}
-
-.panel .productos-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.producto {
-    border-radius: 10px;
-    padding: 10px;
-    background: #ffe6f0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.producto img {
-    width: 100%;
-    height: 150px;        /* todas las imágenes tendrán la misma altura */
-    object-fit: contain;  /* ajusta sin recortar ni deformar */
-    margin-bottom: 10px;
-
-}
-
-.nombre-producto-texto {
-    font-weight: bold;   /* lo hace más negrita */
-    font-size: 16px; 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    /* opcional, para hacerlo un poco más grande */
-   text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
-    color: #000000;         /* opcional, asegura buena visibilidad */
-    text-align: center;  /* opcional, centrado bajo la imagen */
-    margin: 5px 0;
-}
-
-.precio-producto {
-    color: #ff66aa;
-    font-weight: bold;
-    margin: 10px 0;
-    font-size: 24px; /* un poco más grande para destacar */
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5); /* sombra para resaltar */
-    text-align: center; /* centrado bajo el nombre */}
-
-.agregar-btn {
-    background-color: #67c9cc;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 15px;
     cursor: pointer;
-    font-size: 18px;
-    transition: 0.3s;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    animation: zoomIn 0.2s ease-in-out;
 }
 
-.agregar-btn:hover {
-    background-color: #ff66aa;
+@keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
-/* ===================================
-   Carrito flotante
-=================================== */
-.carrito {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-
-
-.btn-carrito {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #ff99cc;
-    border: none;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-}
-
-.btn-carrito:hover {
-    background: #ff66aa;
-}
-
-.contenido-carrito {
-    display: none;
-    position: absolute;
-    bottom: 70px;
-    right: 0;
-    width: 300px;
-    max-height: 400px;
-    overflow-y: auto;
-    background: #92f5f8;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-    color: #333;
-}
-
-.contenido-carrito.abierto {
-    display: block;
-}
-
-.contenido-carrito ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 10px 0;
-}
-
-.nombre-producto {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-}
-
-.eliminar-btn {
-    background-color: #ff66aa;
-    border: none;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 2px 6px;
-    border-radius: 50%;
-    font-size: 0.8rem;
-    transition: 0.3s;
-}
-
-.eliminar-btn:hover {
-    background-color: #ff3388;
-}
-
-.enviar-btn {
-    background-color: #ff3388;
-    color: white;
-    border: none;
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.enviar-btn:hover {
-    background-color: #ff1a75;
-}
-
-/* Precio de cada producto en negrita */
-.precio-item {
-  font-weight: bold;
-  color: #000; /* para asegurar buen contraste */
-}
-
-/* Total en negrita y más grande */
-#totalCarrito {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #480707;
-}
-
-/* ===================================
+/* ==========================
    Footer
-=================================== */
+========================== */
 footer {
-    background: #92f5f8;
-    color: rgb(255, 255, 255);
+    background: #f7f7f7;
     text-align: center;
-    padding: 15px 0;
-    font-size: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    border-top: 2px solid #ddd;
 }
 
-
-
-
-
-/* Ajuste responsivo para tabletas */
-@media (max-width: 900px) {
-    .col {
-        flex: 0 0 calc(50% - 20px); /* 2 columnas */
-    }
-}
-
-/* Ajuste responsivo para móviles */
-@media (max-width: 600px) {
-    .col {
-        flex: 0 0 100%; /* 1 columna */
-    }
+#footer-text {
+    color: #666;
+    font-weight: bold;
 }

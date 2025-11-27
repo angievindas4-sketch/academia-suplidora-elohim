@@ -38,7 +38,7 @@ function enviarWhatsapp(button) {
 Nombre: ${nombre}
 Dirección: ${direccion}
 Teléfono: ${telefono}
-Método de pago: ${pago};
+Método de pago: ${pago}`;
 
     // Número de WhatsApp
     const numeroWhatsApp = "50671256012";
