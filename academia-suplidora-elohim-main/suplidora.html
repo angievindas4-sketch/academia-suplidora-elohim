@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suplidora Elohim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style-suplidora.css">
+</head>
+<body>
+
+<header>
+    <h1 class="academia-titulo">Bienvenido a la Suplidora Elohim</h1>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="academia.html">Academia</a>
+</nav>
+
+<main>
+    <div class="titulo-catalogo-container">
+        <h2 class="bienvenida">Catálogo de Productos</h2>
+    </div>
+    
+    <!-- Modal para imagen -->
+    <div id="modalImagen">
+        <img src="" id="img-modal" alt="Producto">
+    </div>
+
+    <!-- Grid de categorías -->
+    <div class="grid-categorias">
+        <!-- Categoría 1 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="muebleria.html">
+                    <button class="main-btn">Mueblería</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Categoría 2 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="accesorios.html">
+                    <button class="main-btn">Accesorios</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Categoría 3 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="geles.html">
+                    <button class="main-btn">Geles</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Categoría 4 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="pinceles.html">
+                    <button class="main-btn">Pinceles</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Categoría 5 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="brocas.html">
+                    <button class="main-btn">Brocas</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Categoría 6 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="glowspa.html">
+                    <button class="main-btn">Glow Spa</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Categoría 7 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="removedoresysolventes.html">
+                    <button class="main-btn">Removedores y Pinceles</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Categoría 8 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="acrilicosymonomeros.html">
+                    <button class="main-btn">Acrílicos y Monómeros</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Categoría 9 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="maquillajeypestañas.html">
+                    <button class="main-btn">Maquillaje y Pestañas</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Categoría 10 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="electrico.html">
+                    <button class="main-btn">Eléctrico</button>
+                </a>
+            </div>
+        </div>
+    
+        <!-- Categoría 11 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="tips.html">
+                    <button class="main-btn">Tips</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Categoría 12 -->
+        <div class="col">
+            <div class="btn-container">
+                <a href="decoracion.html">
+                    <button class="main-btn">Decoración</button>
+                </a>
+            </div>
+        </div>
+    </div>    
+</main>
+
+
+<footer>
+    <p id="footer-text">By Freelancer Anyelith Nuñez Vindas &copy; <span id="anio"></span></p>
+</footer>
+
+<script src="js/script-suplidora.js"></script>
+
+<script>
+    // Actualiza año en footer
+    document.getElementById("anio").textContent = new Date().getFullYear();
+
+    // Modal funcional (renombrado para evitar conflicto con script externo)
+    const modalImgContainer = document.getElementById('modalImagen');
+    const modalImg = document.getElementById('img-modal');
+    let ultimaSrc = "";
+
+    function abrirModal(src) {
+        if (modalImgContainer.classList.contains('show') && ultimaSrc === src) {
+            modalImgContainer.classList.remove('show');
+            ultimaSrc = "";
+        } else {
+            modalImg.src = src;
+            modalImgContainer.classList.add('show');
+            ultimaSrc = src;
+        }
+    }
+
+    modalImg.addEventListener('click', () => {
+        modalImgContainer.classList.remove('show');
+        ultimaSrc = "";
+    });
+
+    
+</script>
+
+</body>
+</html>

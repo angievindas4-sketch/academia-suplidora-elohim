@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia & Suplidora Elohim</title>
+    <link rel="stylesheet" href="css/style-index.css?v=2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <h1>Academia & Suplidora Elohim</h1>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="academia.html">Academia</a>
+    <a href="suplidora.html">Suplidora</a>
+</nav>
+
+<section id="inicio" class="inicio">
+    <button class="main-btn" onclick="location.href='academia.html'">Quiero estudiar en la Academia</button>
+    <button class="main-btn" onclick="location.href='suplidora.html'">Quiero comprar en la Suplidora</button>
+</section>
+
+<section id="contacto">
+  <h2>Contáctanos</h2>
+  <div class="contacto">
+    <p>📍 Ubicación: Edificio Omni, local #12, segundo piso, al norte de la Plaza de la Cultura</p>
+    <p>☎️ Teléfono / WhatsApp: 
+      <a href="https://wa.me/50671256012" target="_blank">+506 71256012</a>
+    </p>
+    <p>✉️ Correo: 
+      <a href="mailto:academiaelohim@gmail.com">pradohernandeznoelia@gmail.com</a>
+    </p>
+
+    <p>Síguenos en redes:</p>
+    <div class="redes-sociales">
+      <a href="https://www.facebook.com/share/19oZrjnyd7/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.facebook.com/share/14L843orgZ4/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/suplidora_de_unas_elohim?igsh=YWJqMnJleHdtdjds" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@suplidoradeunaselohim" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- Importar font awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+<section id="ubicacion">
+    <h2>Ubicación</h2>
+    <div class="mapa" style="width:100%; max-width:100%; height:400px; text-align:center;">
+        <a href="https://maps.app.goo.gl/J8jkzxcePQkAvAtq8" target="_blank" style="display:inline-block; width:100%; height:100%;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.9954109905134!2d-84.0767474!3d9.934339099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e30020219267%3A0xde081b4644d07355!2sSuplidora%20de%20U%C3%B1as%20Elohim!5e0!3m2!1ses-419!2scr!4v1758303586285!5m2!1ses-419!2scr" 
+                width="100%" 
+                height="100%" 
+                style="border:0; pointer-events:none;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </a>
+    </div>
+    <p style="text-align:center; margin-top:10px;">Dirección: Av. 1, San José, El Carmen, 10101</p>
+</section>
+
+
+<footer>
+    <p id="footer-text">By Freelancer Anyelith Nuñez Vindas &copy; <span id="anio"></span></p>
+</footer>
+
+<script>
+    document.getElementById("anio").textContent = new Date().getFullYear();
+</script>
+
+
+</body>
+</html>

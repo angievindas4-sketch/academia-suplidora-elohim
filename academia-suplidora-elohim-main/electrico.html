@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mueblería - Suplidora</title>
+    <link rel="stylesheet" href="css/style.electrico.css">
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Suplidora de Uñas Elohim</h1>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="suplidora.html">Regresar a las categorías del catálogo </a>
+    </nav>
+
+    <!-- Título de la categoría -->
+    <div class="titulo-catalogo-container">
+        <h2 class="bienvenida">Eléctricos</h2>
+    </div>
+
+    <!-- Panel de productos -->
+    <div class="panel show">
+        <div class="productos-grid">
+            <!-- Producto 1 -->
+           <div class="producto">
+            <img src="img/ELECTRICOS/DRILL_45RPM MESA 35000.jpg" alt="Drill Mesa 45RPM" onclick="abrirModal(this.src)">
+            <p class="nombre-producto-texto">Drill Mesa 45RPM</p>
+            <p class="precio-producto">₡35,000</p>
+            <button class="agregar-btn" onclick="agregarAlCarrito('Drill Mesa 45RPM', 35000)">Agregar a lista</button>
+        </div>
+        <div class="producto">
+            <img src="img/ELECTRICOS/ESTERILIZADOR ELECT - 14000.jpg" alt="" onclick="abrirModal(this.src)">
+            <p class="nombre-producto-texto">Esterilizador eléctrico</p>
+            <p class="precio-producto">₡14,000</p>
+            <button class="agregar-btn" onclick="agregarAlCarrito('Esterilizador eléctrico', 14000)">Agregar a lista</button>
+        </div>
+        <div class="producto">
+            <img src="img/ELECTRICOS/EXTRACTOR 3  ABANICOS 20000.jpg" alt="" onclick="abrirModal(this.src)">
+            <p class="nombre-producto-texto">Extractor de 3 Abanicos</p>
+            <p class="precio-producto">₡20,000</p>
+            <button class="agregar-btn" onclick="agregarAlCarrito('Extractor de 3 Abanicos', 20000)">Agregar a lista</button>
+        </div>
+        <div class="producto">
+            <img src="img/ELECTRICOS/EXTRACTOR PEQUEÑO 13500.jpg" alt="" onclick="abrirModal(this.src)">
+            <p class="nombre-producto-texto">Extractor Pequeño</p>
+            <p class="precio-producto">₡13,500</p>
+            <button class="agregar-btn" onclick="agregarAlCarrito('Extractor Pequeño', 13500)">Agregar a lista</button>
+        </div>
+        <div class="producto">
+            <img src="img/ELECTRICOS/FOCO GEL X  3500.jpg" alt="" onclick="abrirModal(this.src)">
+            <p class="nombre-producto-texto">Foco Gel X</p>
+            <p class="precio-producto">₡3,500</p>
+            <button class="agregar-btn" onclick="agregarAlCarrito('Foco Gel X', 3500)">Agregar a lista</button>
+        </div>
+        <div class="producto">
+            <img src="img/ELECTRICOS/FOCO GEL X CON BASE 9000.jpg" alt="" onclick="abrirModal(this.src)">
+            <p class="nombre-producto-texto">Foco Gel X con Base</p>
+            <p class="precio-producto">₡9,000</p>
+            <button class="agregar-btn" onclick="agregarAlCarrito('Foco Gel X con Base', 9000)">Agregar a lista</button>
+        </div>
+        <div class="producto">
+            <img src="img/ELECTRICOS/FOCO GEL X CON LAMPARA  16000.jpg" alt="" onclick="abrirModal(this.src)">
+            <p class="nombre-producto-texto">Foco Gel X y Lámpara</p>
+            <p class="precio-producto">₡16,000</p>
+            <button class="agregar-btn" onclick="agregarAlCarrito('Foco Gel X y Lámpara', 16000)">Agregar a lista</button>
+        </div>
+        <div class="producto">
+            <img src="img/ELECTRICOS/LAMPARA 256 13500.jpg" alt="" onclick="abrirModal(this.src)">
+            <p class="nombre-producto-texto">Lámpara 256</p>
+            <p class="precio-producto">₡13,500</p>
+            <button class="agregar-btn" onclick="agregarAlCarrito('Lámpara 256', 13500)">Agregar a lista</button>
+        </div>
+        <div class="producto">
+            <img src="img/ELECTRICOS/LAMPARA ESCARCHADA 15000.jpg" alt="" onclick="abrirModal(this.src)">
+            <p class="nombre-producto-texto">Lámpara Escarchada</p>
+            <p class="precio-producto">₡15,000</p>
+            <button class="agregar-btn" onclick="agregarAlCarrito('Lámpara Escarchada', 15000)">Agregar a lista</button>
+        </div>
+        <div class="producto">
+            <img src="img/ELECTRICOS/LAMPARA INALAMBRICA CORAZON 32000.jpg" alt="" onclick="abrirModal(this.src)">
+            <p class="nombre-producto-texto">Lámpara Inalámbrica Corazón</p>
+            <p class="precio-producto">₡32,000</p>
+            <button class="agregar-btn" onclick="agregarAlCarrito('Lámpara Inalámbrica Corazón', 32000)">Agregar a lista</button>
+        </div>
+         <div class="producto">
+            <img src="img/ELECTRICOS/LAMPARA SECADO PEQUEÑA 5000.jpg" alt="" onclick="abrirModal(this.src)">
+            <p class="nombre-producto-texto">Lámpara Secado Pequeña</p>
+            <p class="precio-producto">₡5,000</p>
+            <button class="agregar-btn" onclick="agregarAlCarrito('Lámpara Secado Pequeña', 5000)">Agregar a lista</button>
+        </div>
+        <!-- Más productos aquí -->
+    </div>
+
+    
+    <!-- Modal de imagen -->
+<div id="modalImagen">
+    <img id="img-modal" src="" alt="Producto">
+</div>
+<!-- ===== Carrito flotante (pegar antes del </body>) ===== -->
+<div class="carrito-flotante" id="carritoFlotante">
+  <button id="btnCarrito" class="btn-carrito" aria-label="Abrir carrito">🛒</button>
+
+  <div class="panel-carrito" id="panelCarrito" role="dialog" aria-hidden="true">
+    <div class="carrito-header">
+      <h3>Tu lista</h3>
+      <button id="cerrarCarrito" class="cerrar">✕</button>
+    </div>
+
+    <div class="carrito-body">
+      <ul id="listaCarrito" class="lista-carrito"></ul>
+
+      <div class="carrito-total">
+        <label for="clienteNombre">Nombre (opcional)</label>
+        <input id="clienteNombre" type="text" placeholder="Tu nombre" />
+        <p id="totalCarrito">Total: ₡0</p>
+        <div class="carrito-actions">
+          <button id="vaciarCarrito" class="btn-accion">Vaciar</button>
+          <button id="enviarWhatsApp" class="btn-accion btn-enviar">Enviar por WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast notificaciones -->
+<div id="toastCarrito" class="toast" aria-live="polite"></div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p id="footer-text">By Freelancer Anyelith Nuñez Vindas &copy; <span id="anio"></span></p>
+    </footer>
+
+<script src="js/script-suplidora.js"></script>
+
+</body>
+</html>
