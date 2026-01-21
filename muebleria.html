@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mueblería - Suplidora</title>
+    <link rel="stylesheet" href="css/style.muebleria.css">
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Suplidora de Uñas Elohim</h1>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="suplidora.html">Regresar a las categorías del catálogo </a>
+    </nav>
+
+    <!-- Título de la categoría -->
+    <div class="titulo-catalogo-container">
+        <h2 class="bienvenida">Mueblería</h2>
+    </div>
+
+    <!-- Panel de productos -->
+    <div class="panel show">
+        <div class="productos-grid">
+            <!-- Producto 1 -->
+            <div class="producto">
+                <img src="img/MUEBLERIA/SILLA1.jpg" alt="Silla Moderna" onclick="abrirModal(this.src)">
+                <p class="nombre-producto-texto">Silla Moderna</p>
+                <p class="precio-producto">₡25,000</p>
+                <button class="agregar-btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="producto">
+                <img src="img/MUEBLERIA/MESA1.jpg" alt="Mesa de Comedor" onclick="abrirModal(this.src)">
+                <p class="nombre-producto-texto">Mesa de Comedor</p>
+                <p class="precio-producto">₡50,000</p>
+                <button class="agregar-btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="producto">
+                <img src="img/MUEBLERIA/ESCRITORIO1.jpg" alt="Escritorio" onclick="abrirModal(this.src)">
+                <p class="nombre-producto-texto">Escritorio</p>
+                <p class="precio-producto">₡40,000</p>
+                <button class="agregar-btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="producto">
+                <img src="img/MUEBLERIA/SILLA2.jpg" alt="Silla de Oficina" onclick="abrirModal(this.src)">
+                <p class="nombre-producto-texto">Silla de Oficina</p>
+                <p class="precio-producto">₡30,000</p>
+                <button class="agregar-btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="producto">
+                <img src="img/MUEBLERIA/MESA2.jpg" alt="Mesa Auxiliar" onclick="abrirModal(this.src)">
+                <p class="nombre-producto-texto">Mesa Auxiliar</p>
+                <p class="precio-producto">₡20,000</p>
+                <button class="agregar-btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="producto">
+                <img src="img/MUEBLERIA/ESTANTE1.jpg" alt="Estante Decorativo" onclick="abrirModal(this.src)">
+                <p class="nombre-producto-texto">Estante Decorativo</p>
+                <p class="precio-producto">₡35,000</p>
+                <button class="agregar-btn">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de imagen -->
+<div id="modalImagen">
+    <img id="img-modal" src="" alt="Producto">
+</div>
+ <!-- ===== Carrito flotante (pegar antes del </body>) ===== -->
+<div class="carrito-flotante" id="carritoFlotante">
+  <button id="btnCarrito" class="btn-carrito" aria-label="Abrir carrito">🛒</button>
+
+  <div class="panel-carrito" id="panelCarrito" role="dialog" aria-hidden="true">
+    <div class="carrito-header">
+      <h3>Tu lista</h3>
+      <button id="cerrarCarrito" class="cerrar">✕</button>
+    </div>
+
+    <div class="carrito-body">
+      <ul id="listaCarrito" class="lista-carrito"></ul>
+
+      <div class="carrito-total">
+        <label for="clienteNombre">Nombre (opcional)</label>
+        <input id="clienteNombre" type="text" placeholder="Tu nombre" />
+        <p id="totalCarrito">Total: ₡0</p>
+        <div class="carrito-actions">
+          <button id="vaciarCarrito" class="btn-accion">Vaciar</button>
+          <button id="enviarWhatsApp" class="btn-accion btn-enviar">Enviar por WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast notificaciones -->
+<div id="toastCarrito" class="toast" aria-live="polite"></div>
+
+
+    <!-- Footer -->
+    <footer>
+      <p id="footer-text">By Freelancer Anyelith Nuñez Vindas &copy; <span id="anio"></span></p>
+    </footer>
+
+ 
+
+<!-- Script global -->
+<script src="js/script-suplidora.js"></script>
+
+</body>
+</html>
